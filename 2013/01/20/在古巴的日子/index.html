@@ -1,38 +1,596 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chenxi Qian's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="DAY 1(DAY 1 &#x3D; Jan 1, 2013) 上午十点出发，正午到达皮尔逊，在Tim Hortons解决了简单的午饭，我们的Sunwing的737在三点四十准时起飞。坐在我身旁的是一个同龄的漂亮葡萄牙女生。她叫Silvia，也住在多伦多，操一口流利的英语，我们聊了很久。填古巴的纸签的时候我看了一下她的葡萄牙护照，不错的封面，比我们大陆的护照设计漂亮多了。她问我住在什么Hotel，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在古巴的日子">
+<meta property="og:url" content="http://blog.chenxiqian.com/2013/01/20/%E5%9C%A8%E5%8F%A4%E5%B7%B4%E7%9A%84%E6%97%A5%E5%AD%90/index.html">
+<meta property="og:site_name" content="Chenxi Qian&#39;s Blog">
+<meta property="og:description" content="DAY 1(DAY 1 &#x3D; Jan 1, 2013) 上午十点出发，正午到达皮尔逊，在Tim Hortons解决了简单的午饭，我们的Sunwing的737在三点四十准时起飞。坐在我身旁的是一个同龄的漂亮葡萄牙女生。她叫Silvia，也住在多伦多，操一口流利的英语，我们聊了很久。填古巴的纸签的时候我看了一下她的葡萄牙护照，不错的封面，比我们大陆的护照设计漂亮多了。她问我住在什么Hotel，">
+<meta property="og:locale">
+<meta property="article:published_time" content="2013-01-21T01:39:15.000Z">
+<meta property="article:modified_time" content="2016-10-26T21:27:39.000Z">
+<meta property="article:author" content="Chenxi Qian">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.chenxiqian.com/2013/01/20/在古巴的日子/"/>
+
+
+  <title> 在古巴的日子 | Chenxi Qian's Blog </title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Chenxi Qian's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在古巴的日子
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2013-01-20T20:39:15-05:00" content="2013-01-20">
+              2013-01-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="DAY-1"><a href="#DAY-1" class="headerlink" title="DAY 1"></a>DAY 1</h4><p>(DAY 1 &#x3D; Jan 1, 2013)</p>
+<p>上午十点出发，正午到达皮尔逊，在Tim Hortons解决了简单的午饭，我们的Sunwing的737在三点四十准时起飞。坐在我身旁的是一个同龄的漂亮葡萄牙女生。她叫Silvia，也住在多伦多，操一口流利的英语，我们聊了很久。填古巴的纸签的时候我看了一下她的葡萄牙护照，不错的封面，比我们大陆的护照设计漂亮多了。她问我住在什么Hotel，发现和她不是同一个，遗憾地笑笑，说回来的时候还选这个座位。由于从高纬度飞往低纬度，右舷窗的日落比正常日落长了很多，同时看着也美很多，色彩丰富而柔和，像丝带一般。快到的时候入夜了，左舷窗望出去，下面黑黑的，不知是陆地还是海。后来渐渐地有了一些灯光，Silvia在听音乐，我拍拍她，让她看下面。她说，这是美国的农村吗？我说，一定是城市。她不信，我也想知道下面是哪儿，就叫来了乘务员问。乘务员去问了机长，回来告诉我们，说下面是Miami。<br>过了Miami，不久就到了Varadero国际机场。入关的时候到了一个由一排小屋子分隔成两半的大厅，小屋子里签证官当场看护照给纸签。教训是，飞机上的那张纸签就是在这里用的，丢了的话，交15刀重买一张。签证官看是PRC的护照，轻松地在纸签上盖了个蓝色的章，我们就顺利入境了。过了安检再出去，就是各个旅游公司的大巴。上了车，前遮阳板上看到的是中文：“宇通客车”，旁边是古巴海岸线的图案。<br>来到Hotel，就看到一个大型的顶棚，那是我们Hotel的标志性景观。此时此刻顶棚下面的酒吧进行着表演，就是当地的歌舞。表演者在上面边唱边跳，游客们就在下面跟着跳，气氛非常热烈。我们的Hotel名叫“playa de oro”，我后来查了下西班牙语词典，才知道意思是黄金海岸。酒店Lobby和顶棚混为一体，装饰着黄颜色和蓝颜色搭配的色调，看着很舒服。Lobby附近有三个餐厅，因为订的票是全包的，我们的三餐基本就在这里解决。Lobby有邮局和纪念品商店，此外还有一个古老的台球桌。Lobby的沙发上，坐着各个地方来的游客。一对情侣在某个沙发上静静看着书。男的再看Friedman的THAT USED to BE US，看到了大概三分之一的样子。想起来我箱子里的Kindle上也有这本书，上次看完还没有删除。穿过Lobby进入居住区，晚上看就是一些椰树和几个露天游泳池，还有一个提供饮料的小酒吧。我们的房间在一楼，湿度很高，后来在白天看其实外面的景色也还不错。后来在自助餐厅吃了些汉堡，就早早休息了。<span id="more"></span></p>
+<h4 id="DAY2"><a href="#DAY2" class="headerlink" title="DAY2"></a>DAY2</h4><p>早上起来听了下Sunwing对我们旅途的简介，订了一个Havana的Tour和一个下海浮潜的Tour。我们在Hotel的Lobby换了些比索，100加元换93比索。随后我们坐一个5比索的大巴进城。首先到的是一个叫Plaza America的购物中心，在那边的银行我们换了更多的Peso，由于没有手续费，用100加元可以换入96比索。我们有了钱，以正常价格的两倍在Plaza America买入了一些纪念品。午饭也在那里解决，吃了些虾和龙虾。饮料就是著名的Cuba Libre，就是可乐兑朗姆酒，这个饮料后来多次见到，包括在Day 4晚上在Tropicana Nightclub的饮料。在餐厅的走廊向外望可以看到透过椰子树就是海滩，有一些人在那里玩水和晒太阳。我们后来坐了个10比索的马车去了Downtown Center。看在那个马那么辛苦的份上，10比索也不算很多。那里有一些集市，其实也是给游客购买纪念品的，那里的价格我定义为“正常价格”。买了一个相册，几支笔，几个挂坠，还有两件T恤。一件是Varadero Cuba的剪影，另一件就是那个很有名的切格瓦拉的头像。然后我们去了此行目的地——电信公司。我们到的是一个网点，因为几天Varadero的营业厅不开门。网点说没有卖SIM卡，我们还是得等明天营业厅开门。不过我们在网点看到了据说全Varadero唯一一个可以上网的地方——一台破电脑。收费是每小时6比索。<br>为了拍日落，我们早早回到playa de oro。到了Lobby，那对昨晚在看书的情侣还在那儿，男的还在看THAT USED to BE US，已经看到五分之三处了。<br>拍日落第一次用ND Filter，感觉良好。但是由于云在很远的地平线附近，所以云没有拍出绢绢如丝般的感觉。长曝下的海面当然是美的无法形容，像磨砂的玻璃艺术品，蓝色的基底中折射着夕阳和晚霞的金黄色的光芒。拍完日落我们在自助餐厅饱餐了一顿。晚餐吃得还不错，有各种鱼的各种做法，还有虾和牛肉。晚上我取出我的Nikon15*50双筒，三脚架及望远镜Adapter和指星笔，在几个露天游泳池间的小桥上，和Y同学一起看星星。首先看的当然是猎户座以及M42&#x2F;M43，我给Y同学介绍了梅西耶天体的来历，然后又看了其他一些，比如10点左右在天顶的昴星团，M5。接着就是一轮又一轮的被路人围观，给路人科普，让路人观看。先来的是一对讲话带法语口音的。男的说，我想给我女朋友看一些特别的，能让我看下吗？我同意了，他就很高兴地问我啥啥星座在什么位置，我就帮他在天空中找到，然后他给女朋友看。然后陆续来了几批。当我拿出指星笔指星星的时候，其中几个异常激动的叫了出来——”I know you’re professional!”——”It’s like Jedi! Have you seen the movie Star Wars?”指星笔这东西确实很酷哈哈。</p>
+<h4 id="DAY-3"><a href="#DAY-3" class="headerlink" title="DAY 3"></a>DAY 3</h4><p>早上吃早饭的时候，在餐厅看到一个两人的小桌上放着两本书。其中一本是Friedman的THAT USED to BE US，那个男生还没有把它看完。那是我最后一次见他俩。<br>按照昨天的规划，早上去买SIM卡，到了电信公司问了价格，发现很贵用处又不大，日租费4比索，打电话中欧1.8比索&#x2F;分钟，美加1.4比索&#x2F;分钟，更不爽的是一个重要的功能是缺失的，没有data。所以我们就没有买。在附近又买了些纪念品，然后在downtown那边的一个海滩晃了一上午，感觉那里的海滩没什么大的不同，天一样的蓝，水一样的蓝，可能视野和我们playa de oro的海滩相比更开阔些。<br>那些朗姆酒日记里出现过的老爷车这里满街都是，H同学很喜欢，我就给她和一些好看的车子拍了些合影。<br>回去吃了个饭，我和Y同学继续乘巴士绕整个Varadero走了一圈。岛的西边有一些特色的咖啡馆，桌椅的摆放方式看着很入眼。岛的东边还在开发，一些新的Hotel正在开工。一些更高级的Hotel和度假区也在那儿。看来整个岛并不大，两个小时左右就转完了。那一块应该是想必自己租辆车开转转就很舒服。不过这里租车必须连续租三天，而我们是第四天和第六天有外出一日游的计划，于是就暂且放弃了。我们计划着最后两天去玩帆船。<br>下午回来，又到拍日落的点了。拍了一些满意的照片。当太阳落下以后的几十分钟里，后半段时间内还有一个点是直接无滤镜长曝的好时机，这时的照片，天空会异常的蓝，渐渐过渡到地平线火红色的余晖。海浪打在沙滩上，退下去的时候映着天边的色彩，又是像绢一样的光泽和质地。有一张Y同学站在余晖中的剪影，是今天比较出彩的一张。<br>晚上晚餐在Varadero 1887那个餐厅吃的虾和烟熏三文鱼。吃完了，酒吧那儿在表演歌舞。带头唱的是个皮肤已经晒得黝黑，身体略胖的男人。一身亮闪闪的肩带，富有表现力的眼神，和典型的充满激情的西班牙语说唱。下面的来自世界各地的人虽然不懂西班牙语，也都在跟着唱着。我们点了几杯Blue Moon，身体和他们一起摇摆起来。舞池里基本是女人，有个七八岁小女孩儿跳的特带劲儿。空气中弥漫着海水，汗液，啤酒混和起来的气味，时不时飘来阵阵雪茄的烟香。<br>晚上，和Y同学一起回到海滩拍星星。时间关系只拍了三张，一张是猎户和大犬的合影，一张是金牛，一张是仙后。微亮的灯光下的海滩来一张长曝的特写很具魔幻色彩。不一会儿天上突然飘来了大片的云，形状诡异奇怪，我就开始吓唬Y同学。想着明天还要早起，我们就收起家伙，早早回房间休息了。</p>
+<h4 id="DAY-4"><a href="#DAY-4" class="headerlink" title="DAY 4"></a>DAY 4</h4><p>今天要去Havana。</p>
+<p>从Varadero出发到Havana要经过两个小时，一路上都在加勒比海沿岸。我们的北边就是佛州。现在，我们距key west有144km，距Miami有180km。导游一路上就在用自以为很不错的英语和大家讲着故事。从1492年10月27号哥伦布来到古巴的最东端讲起。讲了一些西班牙人对当地人进行大屠杀的故事。</p>
+<p>一路上还经过了不少好玩的地方。比如有一阵儿我们的路边是大片大片的甘蔗地。导游说甘蔗是古巴人民最喜爱的庄稼。为什么呢？因为甘蔗是他们做朗姆酒的原料。古巴有11.5m人口，哈瓦那的人口是2.2m，和Miami的人口差不多。后来还经过了著名朗姆酒品牌Havana Club的工厂。随后是一个加拿大注资的炼油厂，在很显眼的位置飘着加拿大的国旗，我想其实还是提供技术是关键。古巴的政府有靠旅游得来的收入，当然，和一切社会主义国家一样，人民总是无产阶级。听导游说古巴人民平均月工资只有几十比索。但是按他的意思古巴人还很热爱自己的制度，还说世界上可能已经仅存了——他们不承认中国现在这个状态是社会主义。说古巴人还对全世界都很友好，虽然和美国没什么往来，但也没有敌意。古巴人只有一个敌人——Mother in Law。导游说到这里，比车上的游客先笑了出来。后来我们经过古巴最高的一座公路桥的时候，听那座桥的名字好像是Mother in Law Bridge。这其实反映了一个古巴很重要的社会现实，在古巴是女人做主，并且是结婚以后还是和原来一大家子生活在一起。后来我们在Havana市内看到一些早期西班牙建筑的阳台上，基本都挂着许许多多的衣服，那就是一家人的。</p>
+<p>我们一路上都在沿着大海的那条公路走着，包括大片的甘蔗地，那个Havana Club的工厂，那个加拿大炼油厂，都是在海边。途中我们还经过了一个小酒吧，酒吧里有当地特色的乐队表演。我们点了一个当地著名的饮料——Pina Conada。把朗姆酒混了奶和果汁后，放入掏空的菠萝里，就成了这个饮料。端着个菠萝喝东西是一件很有意思的事。</p>
+<p>快到Havana的时候，导游让我们看右手边的那篇海。照样是海鸥飞着，椰子树零星地点着，乍看一下没什么特别。只是和Varadero的海相比，浪可能大了些，潮水打在岸边，水花可以溅到很高，一大片白花花的。导游说，这就是海明威在《老人与海》中写的那片海。继续向前走，来到一片空旷的海岸，公路的周围有一些修剪得很平的草坪。这里是为了纪念大屠刷而特殊布置的海滩。</p>
+<p>然后我们就到了Havana。穿过一条隧道，车子从海岸走到了河岸。隧道的一边是佛罗里达海峡，另一边就是这条名叫Bahia de La Habana的河。河很宽，河对岸是长长的城墙，看着挺古老的。车就停在了这条河岸公路上。路边都是以前只在明信片上看到的那种带有螺旋状图案的路灯。</p>
+<p>下了车，我们主要参观了Havana市内最著名的三个广场——由南向北分别是Plaza de San Francisco de Asis，Plaza de Armas和Plaza de la Catedral。在Plaza de San Francisco de Asis的时候，阳光很刺眼，就拍了些照片。</p>
+<p>值得一提的是第二个广场——Plaza de Armas。这是一个文艺气息浓厚的小广场，而实际上四百多年来这个广场一直是整个古巴权威和权力的象征。1582年这个地方就有一个广场的雏形了，而现在的广场的这个样子是1792年保留下来的。中间有个带喷泉的小花园，最中间是一个男人的雕像，那个人在1868年引导古巴走向独立。四周有古典的路灯和围栏。再往外，摆了一圈的书摊。这是一个具有多年历史的Book Bazaar。书摊都以略倾斜的竖着的木架为基础，上面摆着各种各样的硬皮软皮的新书旧书，画册，小说，历史书，人物传记等等。大部分是西班牙文的，也有少数英文的。海明威的《老人与海》也有，英文版的质地看上去就是复印的。广场四周是一些具有历史意义的建筑。我们重点参观了Museo de la Ciudad。这是个典型的巴洛克式的建筑，是全古巴最精美的建筑之一。1776年开始动工建造，从1791年到1898年一直是西班牙舰队首长的住所，1899到1902年，美军长官在此地落户，此后，这里一直是总统官邸。1920年后总统就搬走了，此后这个地方变成了市政厅。在1967年，市政府搬出，自1968年至今此处就成了Museo de la Ciudad，这个西班牙语翻译过来就是Museum of the City。所以这个地方见证着古巴好几百年的历史。像其他哈瓦那市内的豪华居所一样，这里也有孔雀休闲的走着。里面展品也很丰富，我们在二楼的方形长廊留影，朝着广场方向有一面古巴国旗。方形长廊中间的下面是花园，好像很多没落的皇室都喜欢造这样的住所，比如长春的伪满皇宫也是这样，现在也是个博物馆，在里面走的感觉是完全一样的。</p>
+<p>Plaza de Armas另一个值得一提的景点是Castillo de la Real Fuerza。它是全美洲现存最老的殖民地城堡，建于1558-1577年。城堡西边的塔顶是一个风向标，叫La Giraldilla。她是1632年由Jeronimo Martinez Pinzon在Havana雕塑的。民众们认为La Giraldilla是一位名叫Dona Ines de Bobadilla的女子，探险家Hernando de Soto的妻子。La Giraldilla最初是在Museo de la Ciudad内部，同时有趣的是，她也出现在了Havana Club这个朗姆酒品牌的标签上。现在这个城堡是一个艺术博物馆，展览的是现在全古巴最有影响力的艺术家的作品。</p>
+<p>继续前行的路上我们经过了一座现代与古典结合得很完美的建筑。那是哈瓦那大学，很多学西班牙语的中国学生在这里做过交换生。从一个小巷子望过去，是一幢粉红色的几层高的小楼，那就是著名的海明威在二战前来古巴时候住过的旅馆。后来我们又回到Plaza de Armas的时候从另一个角度也能望到它。路上还经过了一间屋子，里面放置着全古巴第一辆汽车，是一个黑色的大头老爷车。</p>
+<p>然后就到了Plaza de la Catedral，那里最有名的景点就是一个大教堂。听广场的名字就知道这里有一个天主教教堂。这个教堂在1748年始建，1787年建筑落成的时候，哈瓦那教区也正好成立。这个教堂是整个美洲最古老的天主教堂之一。我们到的时候外面很亮，教堂里的光线相对柔和，这是所有教堂都具有的最一般的特点，在里面拍门外广场上的人就得用点测光活着HDR。教堂内部也有明暗不一的情况，因为教堂通常在高处都有通光线的窗户。这也就是为什么摄影师们偏爱教堂HDR摄影的一大重要原因。在教堂南部的高处有一个彩窗，彩色的光线正好落在入口处左边的柱子底部，好像每个经过的人相机里都有这么一张彩色的光斑。</p>
+<p>中午我们到了一家名叫Dos Gardenia的餐馆吃饭。嗯，名字很小清新，双栀子花。主菜和一般Havana的餐馆不太一样，我们之前吃饭总是点龙虾，这次的主菜是龙虾，鱼，鸡三种混合的。餐馆的地上有几只猫。之前在粉红色旅馆那儿的时候，导游说海明威很喜欢猫，所以自此哈瓦那市内一直有成群的猫，不知是真是假。饭桌上同桌的时一对已过中年的夫妇，来自Thunder Bay这个安省的小城，大家谈着温暖和寒冷区域的话题，聊得很开心。</p>
+<p>饭后去了革命广场。广场很大又没什么人，有个纪念碑，感觉只认识卡斯特罗和切格瓦拉。</p>
+<h4 id="DAY-5"><a href="#DAY-5" class="headerlink" title="DAY 5"></a>DAY 5</h4><p>昨日太累，累觉不爱。今天休息。睡到自然醒，午后温暖的阳光透过椰子树射进屋子，还赖着不起。这才是度假。</p>
+<p>下午第一次下海游泳，和Z同学一起。感觉好咸，咸到恶心。感觉再也不想在海里游了。Z同学遂和我约好，等到夏天来了去安大略湖游泳。游了一会儿，起来，擦干海水，给朋友们写写明信片。</p>
+<h4 id="DAY-6"><a href="#DAY-6" class="headerlink" title="DAY 6"></a>DAY 6</h4><p>今天我们参加了一个one day tour，叫catamaran。大巴把我们接到Varadero最东边的海角，然后换坐船。后来才知道，我们十分地幸运，坐的那条叫Simba的船是整个Varadero海上最有激情的，从水手到船员。我们一上船就坐到了船头的大网上，正下方就是海水。坐在我们一起的是一群意大利人，而在另一半边网上的是一群法国人。坐在船后面的是说英语的人。一个最年轻富有活力的黑人水手用三国语言和大家打招呼并说注意事项。他用意大利语、法语和英语吼着，调动大家气氛。当然，他是古巴水手，所以他会西班牙语。后来还用中文和我聊了聊，看来他还会简单的中文！很晒，网硌得疼，还不时有海水打上来，但我们都很享受躺在网上的时光。海风拂过全身，海鸥时而伴着我们飞。水手们在吧台给我们提供饮料。<br>一两个小时后到了中间一片海域，周围看不到任何的陆地。向下看，是一片蓝一片绿的海底世界。水很清，于是几条船都停在了这个地方，大家纷纷戴好浮潜的装备，跳入水中。我直接带了自己的游泳眼镜就下水了。果然下面有各种珊瑚礁和热带鱼类，和自己非常的近。主要的感觉还是太咸。所以呆了一会儿我就上来了。<br>浮潜结束我们继续前进，在一个叫做Caya Blanco的海岛上停下了。这个岛的名字意思是White Island。在岛上吃了龙虾。午饭的时候还有乐队表演，表演结束乐队大声喊着“Gracias! Thank you Canada!”唱得不错，每人给了五比索小费。原来整个海边木长廊餐厅的客人都是加拿大人。据说来古巴的加拿大人居多，还有许多欧洲人，德国，瑞士，瑞典等国的。冬天的时候美国人要么去佛罗里达，要么去巴拿马。在海岛上，吃完午饭，到2点30分上船前，我们还有好多自由活动的时间。海滩上比基尼美女瞬间多了起来。于是拍了些不错的照片。看着浪不大，就收起相机，又换上泳裤下水了。<br>回到船上，回程了，觉得此行就要结束了，没想到高潮才刚开始。几个水手是天生的表演家和调动气氛的能手。长得还特帅，跳起来特有活力。有个水手长得很像越狱的男主角，笑起来就是少女杀手。仔细一看，船上也是年轻人居多，各种帅哥美女。于是留下很多精彩的照片，特别是有些女孩子的身材和气质非常出众，有些情侣非常甜蜜，有些男孩子也是帅倒一片。放的都是舞曲，整个海面上只有我们的船这么high，别的船从外面旁边经过都是静悄悄的，然后他们向我们投来惊羡的眼神。感觉整个大海都随着我们的音乐动了起来。除了我拿着相机，其他每个人都在跳着。法国人特别激动，他们的天性表现出来了。一个漂亮的小萝莉什么舞曲都会唱，都会跟着跳，于是我的镜头跟了她好久。<br>不一会儿，水手们开始扬帆了。几个法国人在帮忙拉着绳子，每拉一下，大家就齐吼一声。气氛达到第一个高点。后来，气氛随着舞曲逐渐high起来。放到Gungnam Style的时候，很多人都开始跳起来。看得出来那个小萝莉除了会一些西班牙语舞曲外，还会这个韩语的。</p>
+<h4 id="DAY-7"><a href="#DAY-7" class="headerlink" title="DAY 7"></a>DAY 7</h4><p>今天又睡到了中午。一起懒散地吃buffet，吃完后，磨蹭磨蹭。就是度假的节奏。在日落前，Z同学，H同学和Y同学下了水。我在海滩上看着他们，写写明信片。</p>
+<p>午饭的时候决定要在明天早晨看日出。根据startracker的模拟，日出是在明天早晨6点57分左右。由于Varadero这个半岛是东西方向延伸的，海岸也是东西方向，所以看不到真正意义上的海上日出和海上日落。为了能够看到不被树木和建筑物挡住的日出，我们需要另外选择一个地点。我和Y同学晚上先去探班，我用望远镜看到Hotel西边有一块向北延伸到海中大概几十米的大礁石，那里也许可以眺望一下东边。</p>
+<p>遇到一个保安哥哥。不胖，但笑起来憨憨的样子。虽然会的英语不多，但我们还能交流。我们问他这里能不能看到日出，他没理解，只说这里可以钓鱼。然后他给我们看他去钓鱼的照片，在他那个不知道什么品牌的能看照片的手机里给我们翻着。他很开心的样子，还给我们看他钓到的鱼有多大。说着说着他突然想起来他还抓到过飞鱼，就给我们看他抓到的飞鱼的照片。他回到手机的桌面，给我看他一个儿子一个女儿的照片。看着看着就自己笑出来了，问我们他们漂不漂亮。我说他们住在Varadero吗？他说不，Varadero都是给旅游者住的，他们住在Matanzas。</p>
+<p>后来我问他一个月收入能有多少。他说他做保安做一天歇一天，一个月收入按当地比索算是350比索。25个当地比索是一个可兑换的比索（CUC）。一个CUC大概就是一加元。我们旅游者只能用CUC，对当地人来说就是奢侈的货币。他随即打开皮夹给我看他们当地的比索。特地给我看3比索上面的切格瓦拉，看完就说“This is for you！”，居然把那个送给了我。好客到了这个程度。我们觉得他收入这么低，不好意思拿，就给了他一个CUC，结果他就把他钱包里另外的5比索10比索20比索的纸币都给我们了。我们不好意思，又给了他一个CUC，就回去了。</p>
+<p>期待明天的日出。</p>
+<h4 id="DAY-8"><a href="#DAY-8" class="headerlink" title="DAY 8"></a>DAY 8</h4><p>日出前不用中灰镜，日出后用中灰镜。拍海边日出的真理。第一次运用中灰镜拍到了浪打礁石的云雾蒸腾的教科书式风景照。</p>
+<p>午后在暖暖的阳光中离开了我们的海滩，回到Varadero机场。交完了25CUC的机场税，也就是给古巴这个国家留的小费，就在昏黄的夜色中滚蛋了。又幸运地坐在了床边，一路上看到了很多美国城市的夜景。第一个是Key West，然后是Miami，最后一个是Buffalo。然后就回到多伦多了。</p>
+<h4 id="附言-："><a href="#附言-：" class="headerlink" title="[附言]："></a>[附言]：</h4><p>每一个看到此游记的朋友都是一个幸运儿，礼物是一张通过我的审美认证的明信片。如果你没有收到我在古巴给你寄的的明信片，请将地址发至 i [AT] chenxiqian.com，我会在多伦多给你补寄。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2012/12/31/2012%E7%BB%93%E6%9D%9F%E5%89%8D%E6%88%91%E6%83%B3%E8%AE%B0%E5%BE%97%E7%9A%8467%E4%BB%B6%E4%BA%8B/" rel="next" title="2012结束前我想记得的67件事">
+                <i class="fa fa-chevron-left"></i> 2012结束前我想记得的67件事
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/09/29/%E4%B8%80%E4%B8%AA%E8%BF%98%E5%9C%A8%E6%BC%82%E6%B3%8A%E7%9A%84%E4%BA%BA%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84%E5%AE%B6%E5%92%8C%E6%97%85%E8%A1%8C/" rel="prev" title="一个还在漂泊的人所理解的家和旅行">
+                一个还在漂泊的人所理解的家和旅行 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-1"><span class="nav-number">1.</span> <span class="nav-text">DAY 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY2"><span class="nav-number">2.</span> <span class="nav-text">DAY2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-3"><span class="nav-number">3.</span> <span class="nav-text">DAY 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-4"><span class="nav-number">4.</span> <span class="nav-text">DAY 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-5"><span class="nav-number">5.</span> <span class="nav-text">DAY 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-6"><span class="nav-number">6.</span> <span class="nav-text">DAY 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-7"><span class="nav-number">7.</span> <span class="nav-text">DAY 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DAY-8"><span class="nav-number">8.</span> <span class="nav-text">DAY 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%84%E8%A8%80-%EF%BC%9A"><span class="nav-number">9.</span> <span class="nav-text">[附言]：</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chenxi Qian</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

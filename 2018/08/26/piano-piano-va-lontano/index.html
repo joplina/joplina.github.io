@@ -1,38 +1,620 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Chenxi Qian's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="Southern Ontario街角一家叫piano piano的店，望了它几年从未步入一次，以为是个钢琴主题餐厅。即将离开这里去加州了，约了同将离开这里要去香港工作的挚友去吃，才知道餐厅名是意大利语。全名piano piano va lontano，翻译是slowly slowly we go further. &amp;#8718; 今天的云让人回想起宫崎骏的那些故事。天空是让人安心的那种淡蓝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Slowly Slowly We Go Further">
+<meta property="og:url" content="http://blog.chenxiqian.com/2018/08/26/piano-piano-va-lontano/index.html">
+<meta property="og:site_name" content="Chenxi Qian&#39;s Blog">
+<meta property="og:description" content="Southern Ontario街角一家叫piano piano的店，望了它几年从未步入一次，以为是个钢琴主题餐厅。即将离开这里去加州了，约了同将离开这里要去香港工作的挚友去吃，才知道餐厅名是意大利语。全名piano piano va lontano，翻译是slowly slowly we go further. &amp;#8718; 今天的云让人回想起宫崎骏的那些故事。天空是让人安心的那种淡蓝">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-08-27T03:49:25.000Z">
+<meta property="article:modified_time" content="2018-09-13T02:59:40.000Z">
+<meta property="article:author" content="Chenxi Qian">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.chenxiqian.com/2018/08/26/piano-piano-va-lontano/"/>
+
+
+  <title> Slowly Slowly We Go Further | Chenxi Qian's Blog </title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Chenxi Qian's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Slowly Slowly We Go Further
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2018-08-26T23:49:25-04:00" content="2018-08-26">
+              2018-08-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Southern-Ontario"><a href="#Southern-Ontario" class="headerlink" title="Southern Ontario"></a>Southern Ontario</h4><p>街角一家叫piano piano的店，望了它几年从未步入一次，以为是个钢琴主题餐厅。即将离开这里去加州了，约了同将离开这里要去香港工作的挚友去吃，才知道餐厅名是意大利语。全名piano piano va lontano，翻译是slowly slowly we go further. &amp;#8718;</p>
+<p>今天的云让人回想起宫崎骏的那些故事。天空是让人安心的那种淡蓝，树叶绿的恰到好处。我立在溪流转弯处闭眼感受初夏的风，听到沙沙的声音是林子在起舞。&amp;#8718; ​​</p>
+<p>前年冬天去看Sir Simon Rattle最后一次执棒BPO的北美巡回时坐在第二排，前边恰巧坐着大文豪Margaret Atwood；这可是据记载世界上最动听的声音啊！可以等几年，看看Margaret有没有把这段Brahms No.2写进她的小说里，我好买一本寄给当时坐在我身边的人。&amp;#8718;<span id="more"></span></p>
+<p>On the night of the Dunkirk premiere, my parents gave me a why-the-hell-drive-40-miles-at-midnight-to-watch-a-movie-alone-and-do-you-always-watch-movies-alone sort of look. &amp;#8718;</p>
+<p>白平衡是冷色调的城市午后，我在十字路口踟蹰不前。阴雨天的斑马线像打过蜡一样，对面的一张张脸无奈又彷徨，仿佛都在凝视着镜子里那个无知的自己。&amp;#8718; ​​​​</p>
+<p>没有飘雪，走的迢迢小径蜿蜒穿过城市中心。夜色下皆是疾行的人。时而有一张瘦削灰暗的脸在一片刻被街灯照出了暖色调的一面。这即便是归家路留给我的唯一印象了。想起柳宗元说的，惟人之初，总总而生，林林而群。&amp;#8718; ​​</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="NorCal"><a href="#NorCal" class="headerlink" title="NorCal"></a>NorCal</h4><p>午后遽别多年一见的好友们，匆匆赶往Lake Lagunita，那年最爱去的校园某角落。这回整个湖连同周遭几百米一个人都没有，只剩夏日虫鸣和热醺醺的微风。有些紧张羞涩，一种时隔多年又见初恋担心她已经不认得我了的错觉。可这又是多么美好和平静啊。想念一个地方与想念一个人竟是如此相似。&amp;#8718;</p>
+<p>Driving down on Junipero Serra Fwy (I-280) from Menlo Park to Cupertino has always been a pure pleasure. It’s a winding highway that resembles Don Valley Pkwy in Toronto or Arroyo Seco Pkwy in LA. Lying on the other side of the Stanford Dish, the landscape looks rugged yet serene, like a golden version of the rolling hills in Palouse (Washington), Central Val d’Orcia (Tuscany), or South Moravia (Czech). &amp;#8718;</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="Foggy-Bottom"><a href="#Foggy-Bottom" class="headerlink" title="Foggy Bottom"></a>Foggy Bottom</h4><p>Driving through the Theodore Roosevelt Bridge at 5 a.m. marked the pinnacle of my solitude in Foggy Bottom. The only thing I could hear is the flowing Potomac River. &amp;#8718;</p>
+<p>好友Arturo拿了他的第三个格莱美。五年前的夏天在雾底和他相识于彻夜长谈，聊爵士乐，聊古巴，聊拉丁文化。两年前我们在上东区一家鼓店聊文艺复兴和巴洛克遗产对拉美地区的影响。我说你是我见过的音乐人中最像学者的。他说，思维和知识是后天学得，但人文使命是写在你血脉里的。&amp;#8718; ​​​​</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="江南"><a href="#江南" class="headerlink" title="江南"></a>江南</h4><p>在苏州站下车的地方，很多归家的人和儿时的我一样，激动的拍照，驻足感受这一刻。确实车站的建筑很美，疾驰而过的车很美，甚至苏州这两个字本身也很美。美到令人心痛。但我没有拍照分享给大家说我回家了，就匆匆离去。想起赫尔曼·黑塞的堤契诺之歌里的句子——“如今我不再如醉如痴，也不再想将远方的美丽及自己的快乐和爱的人分享。我的心已不再是春天，我的心已是夏天。我比当年更优雅，更内敛，更深刻，更洗练，也更心存感激。我孤独，但不为寂寞所苦，我别无所求。我乐于让阳光晒熟。我的眼光满足于所见事物，我学会了看，世界变美了。”&amp;#8718;</p>
+<p>回国三周的最后几日。朋友们纷纷问我在哪里了。我只回，“在一个看得见山，听得见雨的地方”。我要把对杭州的爱藏在心里。&amp;#8718; ​​​​</p>
+<p>时常能记起的瞬间是和你在竹林里迷路，空气差不多湿了七分。这江南的林子让往来行人看懂了苍翠欲滴的那个滴字。找回那条通往曲院风荷的小径时已是细雨绵绵。踏着自儿时就熟悉的那些水漉漉的青石板，我们在伞下畅叙，走断桥不断，望孤山不孤。&amp;#8718; ​​​​</p>
+<p>好像是一个关于白堤的梦。醒来依稀辨得有秋雨润沐、春萍浮沉。记忆里油酥酥的江南，倏地如林风眠晚年的画一般灿烂而凝重了。&amp;#8718; ​​​ ​​​​</p>
+<p>我现在回想江南的黄昏，能记起的仅是无心望见的薄暮的云，无意听到的石板路上的跫音，和无力拆开的他手书的信了。&amp;#8718; ​​​​</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="SoCal"><a href="#SoCal" class="headerlink" title="SoCal"></a>SoCal</h4><p>那时南加的夏天还没到。每天早上步行六分钟，穿过煦阳下那些裁剪灌溉得恰到好处，照旧鲜嫩欲滴的草木。枝叶间遍布各色鲜花，朵朵极盛，无任何一瓣显出一丝干靡。沁人心脾的气息攻击性的扑来，透遍全身。恍悟“袭人”的“袭”字之妙。到办公室里身上的花香不散，提笔工作的时候像是带着一整个春天。&amp;#8718; ​​</p>
+<p>天真是好到无聊。好久没有雨声，大落地窗望出去每天都是蒙了层黄色的Canaletto工笔画真迹。记忆中的大湖区和新英格兰就有趣多了，每到夏末初秋的傍晚，突如其来的狂雨瞬时洗湿一小半窗，天晴之后还有一圈水的晕影，仿佛JMW Turner的写意山水。&amp;#8718; ​</p>
+<p>Miss the days when my 15-minute commute to work on foot would show me the masterpiece of Daniel Libeskind or Norman Foster. ​​​​Now if I wanna see a Norman Foster I need to hop on a plane for San Jose. &amp;#8718;</p>
+<p>朋友放了两本汪曾祺在我客厅里。在翻到他写的岁暮天寒，彤云酿雪之前，我并不认为自己会这么早想念加拿大。&amp;#8718;</p>
+<p>Fairy-land to visit but a desert to live in according to Charles Dickens. &amp;#8718;</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="Upstate-New-York"><a href="#Upstate-New-York" class="headerlink" title="Upstate New York"></a>Upstate New York</h4><p>第四次来到阿巴拉契亚的余脉时已经习惯了旋行于崎岖的山路。夕阳不时穿过叶子的缝隙把车前盖染成金色。而后夜色弥漫，于是起起伏伏的不知是山还是谷，氤氤氲氲的不知是云还是雾。恍惚间车灯探到前方一头鹿，略带一丝惴惴不安的回眸，几个踱步，消失在烟霭深处。&amp;#8718;</p>
+<p>住在爱默生和梭罗笔下的纽约上州阿迪朗达克山。美池纵横，鸟鸣百啭，草木葳蕤，巉岩环绕——可以满足我对自然的一切幻想。&amp;#8718;</p>
+<p>(not quite upstate)<br>三年前的今天我把父母从长岛接回曼哈顿，走的brooklyn queens expressway，中间会经过first calvary cemetery；第一次自己开车走这条路，景象是令人惊叹的：密密麻麻的大片墓碑在右手边延伸好几百米。后面是曼哈顿岛的天际线全景，全部都被白茫茫的碑群托起来了。我当时想，墓碑下面的这些人，生前也许在后面的岛上忙忙碌碌，有各种各样的追求，为自己的目标奋斗着，这其中有多少故事被记载了下来，而绝大多数的却随风飘散，再也无人可知了。那是我离Existentialism和Absurdism最近的一次。&amp;#8718;</p>
+<ul>
+<li></li>
+</ul>
+<h4 id="Poetry-Music-Absurdism"><a href="#Poetry-Music-Absurdism" class="headerlink" title="Poetry | Music | Absurdism"></a>Poetry | Music | Absurdism</h4><p>被问及今天早饭是什么的时候我说”oats, eggs, and jim croce’s alabama rains” &amp;#8718;</p>
+<p>每年无论多忙碌都会去几次黑夜保护区，到丛林深处，或者海浪拍打的礁石边，彻夜不眠的和头顶的星空对望。我带着同去的朋友会觉得我是个理想主义者。可自长大以后我就不记得想那些浪漫的神话了，心中只有明晰的现实。无尽天穹之下，你我如草芥蝼蚁，何以不汲汲营营。&amp;#8718; ​​​​</p>
+<p>It was these ephemeral yet timeless moments shared with you that I treasured most - sunset upon deeply etched scars in the Grand Canyon, nightfall at the Athabasca Glacier of the Columbia Icefield, and ​​​the blue hour portrayed in Riddarfjärden, Stockholm by Eugène Jansson. &amp;#8718; ​​​​</p>
+<p>刚学的一个新词eudemonia让我有一种冲动，要把这些年遗失的梦境都找回来，据此写一部剧。这部剧没有造作的儿女情长，没有缱绻的风花雪月。取而代之的是不眠雨夜的卧谈，周末茶后的私语，和匆匆夏末的离别。&amp;#8718;</p>
+<p>夜读陈继儒小窗幽记，深觉明末的这种清言小品无论说理如何透彻都会有些那个时代特有的迂腐在里面，既无逻辑，也不清新。就像冯唐的文字有着改革开放初期成长起来的文艺男青年特有的媚气，陈琦的课堂段子有着后世贸时代成长起来的自由主义派特有的拜金和崇洋之风。&amp;#8718;</p>
+<p>Again here she comes, with poetic reasoning flowing out of her mouth. Have to admit this friend of mine is an affable good-looking existentialist with impressive literary skills - a true reincarnation of Albert Camus. &amp;#8718;</p>
+<p>Chivo也许是这个世界上最钟情于黄昏的人。诚然，光消逝前的瞬间，可以让人没有恨，没有虚荣，没有恐惧，也没有孤独与忧郁。&amp;#8718;</p>
+<p>Talking with stupid people was breathtakingly harrowing. Almost Kafkaesque. &amp;#8718; ​​​​</p>
+<p>肖邦留下过一篇A小调圆舞曲遗作。全谱区区两分钟，默念首尾四小节即可窥尽其指间风华。我总是说D大调是阳光，A小调是水。一连三夜沉醉于那几个恰如其分的黑键，我已溺水而不治。&amp;#8718;</p>
+<p>希望自己是一个数学家，在终极灵感来临前出家。或者去做一个摇滚歌手，在演唱事业极盛时自杀。 ​​​这样的话，遗憾是这个世界的，不是我的。&amp;#8718; ​​​​</p>
+<p>It was in gloomy winter when you told me how you loved Pablo Neruda and his poem, “I want to do with you what spring does with the cherry trees”. &amp;#8718;</p>
+<p>音乐也会让人陷入荒谬主义沉思。伦敦和爱丁堡突降暴雪，就日夜宅屋里，埋没在旅伴的粤语歌单中。歌很美。纯粹的美。我似乎已过了会被词曲撩拨起情感的年纪，但心里并非波澜不惊。不免会去想歌中故事的幻灭，流行文化的幻灭，和艺术家生命的幻灭。但唱歌的人，和听歌的人，未尝不都是认真生活的人呢。 ​​​​(不知道幻灭这个中文词的读者可以将其替换为evanescence) &amp;#8718;</p>
+<p>Atticus once wrote “It’s not always the fear of losing them that scares us. It’s that we have given them so many of our pieces that we fear losing parts of us when they are gone.” Isn’t it a shame that generation after generation, young poets are wasting their time writing sentences like “we’re all just a bunch of broken hearts looking for someone who resembles the pieces that we lost” and pretending to be old men addicted to sadness or filled with regret?​​ 我因此渐渐不喜欢Atticus的文风了。这些句子像极了北岛写的“那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音”。北岛这句写得还稍好些，毕竟写《波兰来客》的时候他已经是个48岁的中年人了，差不多也该真正理解碎这个字了。&amp;#8718;</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/05/Arizona%20Spring/" rel="next" title="Arizona Spring">
+                <i class="fa fa-chevron-left"></i> Arizona Spring
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Southern-Ontario"><span class="nav-number">1.</span> <span class="nav-text">Southern Ontario</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NorCal"><span class="nav-number">2.</span> <span class="nav-text">NorCal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Foggy-Bottom"><span class="nav-number">3.</span> <span class="nav-text">Foggy Bottom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B1%9F%E5%8D%97"><span class="nav-number">4.</span> <span class="nav-text">江南</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SoCal"><span class="nav-number">5.</span> <span class="nav-text">SoCal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Upstate-New-York"><span class="nav-number">6.</span> <span class="nav-text">Upstate New York</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Poetry-Music-Absurdism"><span class="nav-number">7.</span> <span class="nav-text">Poetry | Music | Absurdism</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chenxi Qian</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

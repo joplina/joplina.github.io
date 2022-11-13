@@ -1,38 +1,570 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chenxi Qian's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="起因：一周前barristor的诞生自从一周以前三星公司的研究人员发的那篇science文章（barristor）开始，就一直在想，历史会不会重演。从transistor诞生到今天，经历整整50年，硅基半导体的繁荣到了令过去的无法想象的程度。 Walter Kohn和Bell Labs的关系前两天陪在Walter Kohn身边，他说当时他在东部读书，由于家里有人得了严重的疾病，需要赚钱给家里，所以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="给大家讲几个故事吧">
+<meta property="og:url" content="http://blog.chenxiqian.com/2012/05/24/%E7%BB%99%E5%A4%A7%E5%AE%B6%E8%AE%B2%E5%87%A0%E4%B8%AA%E6%95%85%E4%BA%8B%E5%90%A7/index.html">
+<meta property="og:site_name" content="Chenxi Qian&#39;s Blog">
+<meta property="og:description" content="起因：一周前barristor的诞生自从一周以前三星公司的研究人员发的那篇science文章（barristor）开始，就一直在想，历史会不会重演。从transistor诞生到今天，经历整整50年，硅基半导体的繁荣到了令过去的无法想象的程度。 Walter Kohn和Bell Labs的关系前两天陪在Walter Kohn身边，他说当时他在东部读书，由于家里有人得了严重的疾病，需要赚钱给家里，所以">
+<meta property="og:locale">
+<meta property="article:published_time" content="2012-05-25T00:39:15.000Z">
+<meta property="article:modified_time" content="2016-10-26T21:37:00.000Z">
+<meta property="article:author" content="Chenxi Qian">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.chenxiqian.com/2012/05/24/给大家讲几个故事吧/"/>
+
+
+  <title> 给大家讲几个故事吧 | Chenxi Qian's Blog </title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Chenxi Qian's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                给大家讲几个故事吧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2012-05-24T20:39:15-04:00" content="2012-05-24">
+              2012-05-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="起因：一周前barristor的诞生"><a href="#起因：一周前barristor的诞生" class="headerlink" title="起因：一周前barristor的诞生"></a>起因：一周前barristor的诞生</h4><p>自从一周以前三星公司的研究人员发的那篇science文章（barristor）开始，就一直在想，历史会不会重演。从transistor诞生到今天，经历整整50年，硅基半导体的繁荣到了令过去的无法想象的程度。</p>
+<h4 id="Walter-Kohn和Bell-Labs的关系"><a href="#Walter-Kohn和Bell-Labs的关系" class="headerlink" title="Walter Kohn和Bell Labs的关系"></a>Walter Kohn和Bell Labs的关系</h4><p>前两天陪在Walter Kohn身边，他说当时他在东部读书，由于家里有人得了严重的疾病，需要赚钱给家里，所以到某个地方去打工。这个地方是Bell Labs。而当时招他进去的那个人，就是transistor的发明者之一。按照Walter Kohn的描述，这个人是三个因发明transistor而得诺奖的人中最不出名的一个，叫William Shockley。另两个中有一个是是人尽皆知的凝聚态大牛，UIUC的游泳冠军，因为超导理论还得过一次诺奖的Bardeen。我问Walter你当时在Bell Labs具体做些什么工作。他说，由于他去的时候，transistor刚刚发明出来，实验室各个部门都在热火朝天地做transistor相关的工作。他说有个叫硅纯化的技术，然后停顿下，隔了会儿终于想起来那个词，zone melting，使得transistor的研发成为可能。这是现在我们本科物化课上教过的东西。那个时候Bell Labs里面大家就在干这个，生产高纯度的硅。实际上在上世纪初，已经有transistor的想法被人提出，但是由于没有高纯硅，没有实现。所以，这也印证了5天前Stephen Cheng在他的报告中提出的观点，每一次工业革命，都是材料技术的突破在为其做着保障。</p>
+<h4 id="William-Shockley和硅谷的关系"><a href="#William-Shockley和硅谷的关系" class="headerlink" title="William Shockley和硅谷的关系"></a>William Shockley和硅谷的关系</h4><p>尽管Kohn说Shockley没什么名气，但其实他的名气已大到我一个外行人很崇拜的程度了。应该说，Shockley是对AT&amp;T的Bell Labs、Silicon Valley和Stanford University这三个地方贡献最大的历史人物之一。发明transistor后，Shockley萌生了创业的想法，去东部招了一批人，离开Bell Labs创立自己的公司制造晶体管。其中就有Walter Kohn。这批人中最有名的是八个人，就是后来集体叛逃的“The Traitorous Eight”。他们后来创建了著名的Fairchild（仙童半导体）。后来，八个人中又有两个人从仙童出走，成立了Intel，这两个人是Robert Noyce和Gordon E. Moore。前者是集成电路的co-inventor，后者不用多说，某定律以他命名，直接解释为什么我们现在的电脑卖得这么便宜。所以，Kohn曾经的老板，脑袋极聪明的Shockley，因为没有足够好的商业头脑和经营水准，自己失败了，却直接孕育出了硅谷的雏形。<span id="more"></span></p>
+<h4 id="Bell-Labs和硅谷的关系"><a href="#Bell-Labs和硅谷的关系" class="headerlink" title="Bell Labs和硅谷的关系"></a>Bell Labs和硅谷的关系</h4><p>一句话，AT&amp;T的垄断和高昂的电话费带来的资金，养得起这样一个实验室，并圈养了一大批可以定心做基础研究的顶尖科学家。那时的高端人才不在高校，而是在这个极为庞大的工业界实验室。后来因为反垄断，AT&amp;T拆了，Bell Labs卖了，人才却留在了硅谷。</p>
+<h4 id="Stanford为我们讲述新的故事"><a href="#Stanford为我们讲述新的故事" class="headerlink" title="Stanford为我们讲述新的故事"></a>Stanford为我们讲述新的故事</h4><p>在2011年7月26日，鲍哲南回母校南大做了个讲座，因为我和一帮同学去北京玩，错过了这场讲座，同时错过的还有2011年7月28日陈宇林的报告。鲍哲南也是Bell Labs一段历史的见证者，尽管不是什么光彩的历史。曾经在Bell Labs有个大牛叫Jan Hendrik Schön，是鲍哲南的老板。这人science和nature文章无数，把分子电子学和分子导线这类的东西吹得神乎其神，各种实验结果出奇得好，只是别人无法重复，所以后来直接栽了，这就是科学史上著名的Schön Scandal，每次nature和science还有nature的各种子刊有社论或者类似的文章提到学术不端，总会把这个拿出来说一下。不过还好鲍哲南没有参与她老板的造假，Bell Labs解散后，跟随着一大帮研究人员到Stanford安了家。本来硅谷的繁荣，很大程度上是Stanford提供的资源造就的。比如思科的创始人，那对最初在Stanford做了世界上第一台路由器用来在网络上写情书的情侣。再加上Bell Labs从解散开始源源不断地有人流入Stanford，那里就不缺优秀的大脑。鲍哲南的工作，让我们看到了化学和电子的结合，典型的半导体产业思维，所以说她的科研是有Bell Labs的基因在里头的。</p>
+<h4 id="张守晟今天在南大做的报告"><a href="#张守晟今天在南大做的报告" class="headerlink" title="张守晟今天在南大做的报告"></a>张守晟今天在南大做的报告</h4><p>上文提到，2011年暑假和鲍哲南一起来南大做报告的还有陈宇林，当时是Stanford的研究员。张守晟今天来南大做的报告里，有一些工作就是他做的。张守晟立业的年代，AT&amp;T已经不是以前的AT&amp;T，Bell Labs也已经没了，所以他的工作是从这个年代工业界最大的实验室，IBM的Watson Lab开始的。而今天的Watson Lab规模不及昔日鼎盛时期的Bell Labs的十分之一大。值得注意的是Watson Lab也有一些诺奖得主，比如那个在Bardeen后一年拿了物理奖的那个研究量子隧穿的日本人Leo Esaki，还有发现了高温超导的J. Georg Bednorz和K. Alex Müller。Watson Lab也出过一些极有才能的华裔科学家，除了张守晟外，还有孙守衡。为什么孙守衡后来去了离IBM总部比较近的Brown，也许是他做的东西看不到未来，就到小学校去养养老了。孙守衡一个化学出身的人，理论自然也没有张守晟这个老杨的学生扎实，感觉现在在一个体系上做死了，离半导体方面的应用越来越远。这是题外话了。回到张守晟的工作，按照他自己的说法，他的努力使得半导体的设计有了一条新的思路，可以直接从根本上避免电路过热，从而突破了Moore’s Law另一方面的限制。所以说，张守晟也是待对了地方，要有机会把技术转移到工业界，硅谷提供了最快的途径。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2012/10/29/3D%E6%89%93%E5%8D%B0%E6%9C%BA%E4%B8%8E%E7%A1%AC%E4%BB%B6%E5%A4%8D%E5%85%B4/" rel="prev" title="3D打印机与硬件复兴">
+                3D打印机与硬件复兴 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%B7%E5%9B%A0%EF%BC%9A%E4%B8%80%E5%91%A8%E5%89%8Dbarristor%E7%9A%84%E8%AF%9E%E7%94%9F"><span class="nav-number">1.</span> <span class="nav-text">起因：一周前barristor的诞生</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Walter-Kohn%E5%92%8CBell-Labs%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">Walter Kohn和Bell Labs的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#William-Shockley%E5%92%8C%E7%A1%85%E8%B0%B7%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">William Shockley和硅谷的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bell-Labs%E5%92%8C%E7%A1%85%E8%B0%B7%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">4.</span> <span class="nav-text">Bell Labs和硅谷的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stanford%E4%B8%BA%E6%88%91%E4%BB%AC%E8%AE%B2%E8%BF%B0%E6%96%B0%E7%9A%84%E6%95%85%E4%BA%8B"><span class="nav-number">5.</span> <span class="nav-text">Stanford为我们讲述新的故事</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%A0%E5%AE%88%E6%99%9F%E4%BB%8A%E5%A4%A9%E5%9C%A8%E5%8D%97%E5%A4%A7%E5%81%9A%E7%9A%84%E6%8A%A5%E5%91%8A"><span class="nav-number">6.</span> <span class="nav-text">张守晟今天在南大做的报告</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chenxi Qian</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

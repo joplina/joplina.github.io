@@ -1,38 +1,575 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chenxi Qian's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="最近刚刚提交了加拿大PR的申请，忙完以后花了一个周末的时间开车走遍了多伦多的一些好久没去的角落。真正细细的品味以后，发现越来越爱这个城市，另一方面因为在申PR可能自然而然有一些心理上的变化吧。 今年暑假去美国中部看一个好友，和她聊起人与城市，说我大四的时候才发现自己爱上了南京，大学前面三年从来不会有的那种感觉。她说“应该是和你留恋这个城市里的某些人有关吧”。其实非也。虽然我确实很留恋在南京最后一年">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人与城市">
+<meta property="og:url" content="http://blog.chenxiqian.com/2014/12/20/%E4%BA%BA%E4%B8%8E%E5%9F%8E%E5%B8%82/index.html">
+<meta property="og:site_name" content="Chenxi Qian&#39;s Blog">
+<meta property="og:description" content="最近刚刚提交了加拿大PR的申请，忙完以后花了一个周末的时间开车走遍了多伦多的一些好久没去的角落。真正细细的品味以后，发现越来越爱这个城市，另一方面因为在申PR可能自然而然有一些心理上的变化吧。 今年暑假去美国中部看一个好友，和她聊起人与城市，说我大四的时候才发现自己爱上了南京，大学前面三年从来不会有的那种感觉。她说“应该是和你留恋这个城市里的某些人有关吧”。其实非也。虽然我确实很留恋在南京最后一年">
+<meta property="og:locale">
+<meta property="article:published_time" content="2014-12-21T01:39:15.000Z">
+<meta property="article:modified_time" content="2016-10-26T21:35:10.000Z">
+<meta property="article:author" content="Chenxi Qian">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.chenxiqian.com/2014/12/20/人与城市/"/>
+
+
+  <title> 人与城市 | Chenxi Qian's Blog </title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Chenxi Qian's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                人与城市
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2014-12-20T20:39:15-05:00" content="2014-12-20">
+              2014-12-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近刚刚提交了加拿大PR的申请，忙完以后花了一个周末的时间开车走遍了多伦多的一些好久没去的角落。真正细细的品味以后，发现越来越爱这个城市，另一方面因为在申PR可能自然而然有一些心理上的变化吧。</p>
+<p>今年暑假去美国中部看一个好友，和她聊起人与城市，说我大四的时候才发现自己爱上了南京，大学前面三年从来不会有的那种感觉。她说“应该是和你留恋这个城市里的某些人有关吧”。其实非也。虽然我确实很留恋在南京最后一年常和我在一块儿的那些人，但总体上来讲，对一个城市的爱，是随着对这个城市了解的加深而逐步加深的。大四的时候campus在市中心，自己也搬出了学校，住到了南京最典型的民国风格的小弄堂中——小巷名字我还特别喜欢，叫“苏州路”，能让我有家的感觉。那一年和父母、好友、来访问的教授和学者们一起走遍了南京大大小小的博物馆、历史街区和自然景点，对这个城市的历史、文化和民风了解地非常深入，于是越来越喜欢这个地方。在哪一天和谁走过哪里我现在还都记得清清楚楚，比如和ZJ一起去了甘熙故居，和ZXY一起走过了颐和路的民国使馆区，和1988年诺贝尔化学奖得主RH及其夫人去了秦淮河和栖霞山，和SW一起在玄武湖拍荷花然后夜闯紫峰的顶层和保安捉迷藏等等。当时我还有一个习惯，每天请一个人吃饭，每次都去一家口碑不错但没尝试过的新店，大半年下来把南京最好吃的都吃了个遍。</p>
+<p>回忆就此打住。我只是举个例子，说说自己是怎么和一个城市慢慢建立起感情的。和我的家乡苏州就更不用说了，出生在城墙内就一辈子是苏州人。现在讲讲多伦多。<span id="more"></span></p>
+<p>在多伦多两年多，对其了解也是慢慢加深，直到最近才发现这里的很多东西还是很吸引我的。首先刚来的时候，就发现这是一个充满了公园的城市。我是在号称“花园城市”的苏州长大的，后来去过的几座城市也是绿化率极高的比如南京和长春，但这些都不及多伦多的绿色给我的印象深刻。市中心到处都是大大小小的绿地，开车半小时到一小时的地方就能看到原始丛林和自然保护区。“Green Belt”计划保证了多伦多市中心周边的原始丛林只会变多，永远不会变少。以前每周末都会去多伦多周围的小山里面跑，呼吸最纯净的空气。安大略湖里的Toronto Island和Tommy Thompson Park我也常去，那里是鸟类的天堂，后者人比较少，我特别喜欢那里的杂草丛、湿地和天然跑道。向南看湖，向北看城市的天际线，时不时头顶有岛上机场的飞机和鸟儿同时飞过，就会感慨城市和自然，人和自然如此融洽的地方真是不多。纽约的中央公园，Bilbao的绿带，苏州的园林算是其他比较著名的例子吧。由于我太爱大自然了，如果说我将来要留在加拿大，在这里能感受到的人和自然的亲密可能是我选择留下来的最主要因素之一了。</p>
+<p>说完自然的东西讲讲人文。人文这个东西太大了，我们就谈艺术这一小点的几个小方面。电影不谈了，大家都知道好莱坞要拍纽约、芝加哥和洛杉矶的时候基本都会来多伦多把路牌换了，装成那几个城市。这里我就说说建筑好了。在苏州长大的孩子都会认识一名建筑师，I. M. Pei，中文叫贝聿铭。他是1983年Pritzker Prize得主，因为卢浮宫金字塔入口的设计而备受好评及争议并一举成名。IMP出生在苏州。我读高中的时候，他的封刀之作——苏州博物馆的新馆刚刚落成。他所在的贝家是狮子林的最后一任主人，从小受苏州传统建筑设计的熏陶，他的最后这个作品也算是他对家乡的一种回馈吧。IMP的作品遍布全球，还有一些例子比如华盛顿特区National Gallery of Art的东楼，多伦多CIBC的总部大楼，及MIT化学系的楼。讲IMP是为了引出Frank Gehry这个人。FG和IMP的经历很像，出生在他国，最后成了美国最著名的建筑设计师。FG出生在多伦多，现在还有着美加双国籍。FG是南加州大学建筑学教授，Santa Monica学派的代表人物（虽然这个学派因为缺乏理论基础而备受争议）。他家就在Santa Monica，这里恰巧也是我去过的美国大大小小城市中最爱的一个。知乎上某个著名回答“设计师这样的工作，可以做一辈子吗？”的作者，也是在这里成长起来的，他的导师是UCLA的Barton Myers，他说的一句无关紧要的话我很喜欢——“每天下午，5 点 45 分，我下楼出门，坐上 8 路公交车，一直做到 santa monica，在绵长的沙滩上躺着，一直等到几个小时后太阳下山，再坐车去公寓前的 Ralph 买些吃的，回家。”——因为我也干过这样的事。回到FG的话题——因为我三天两头见FG的作品，他在我心中的地位渐渐的上升到了IMP一样的地位。FG拿了1989年的Pritzker Prize，他的著名作品包括了Bilbao的Guggenheim Museum和MIT的Stata Center。而我常常见到的，就是多伦多人心中最棒的建筑——Art Gallery of Ontario (AGO)北边的入口立面。我觉得在他设计的走廊上和三两好友看着多伦多的夜色喝个小茶聊聊天是在多伦多能享受到的最惬意的事情了。这为什么会为你带来快乐——因为在这样一个环境中你会觉得你在与这个时代最优秀的视觉艺术家想象中的空间同行——就像海明威描述巴黎时用到的那个词组“流动的盛宴”。前两天在多伦多的雨夜跑了一个小时，到Four Seasons Center取了一幅书法，一路上我就有这样的感觉，在这些建筑之间穿梭确实是一种享受。同理我也对波士顿（剑桥）很有好感，比如它有IMP设计的化学楼和FG设计的Stata Center。</p>
+<p>除了优秀的艺术家，这里也有优秀的银行家、管理顾问、IT工程师和科研工作者。多伦多是北美乃至全球最大的生物医学研究中心之一。研究型医院布满了市中心最主要的那两条路。Princess Margaret Cancer Center打出标语说“One of the Top 5 Cancer Research Centers in the world &#x2F; We are getting closer”。对癌症的关注不仅是在科研上，多伦多一年一度纪念Terry Fox的马拉松也深深体现了这个国家这个城市的人文关怀。因为偏重生物医学的关系，多伦多的化学研究也不差。我的导师GAO就是一位优秀的化学家，他是一位各方面都很出色很平衡的科研工作者。我的朋友们和教授遍布各个领域，他们都为多伦多做出了点点滴滴的小贡献。我也很高兴能成为这里的一部分。我们组曾经的一个很可爱的日本学者前些天回来看望导师和老同事，就在多伦多停留了两三天就又飞回日本了。大家很不解，问他，你就是特地来看我们吗。他说是。他还反复说自己很感激，就因为他当年在我们组发了一篇JACS，那是他的梦想。人和城市的关系和微妙，就像曾经有人说过的，漂泊的时候要过最少的生活，不要总想着在那里带走什么，而是要期待能为那里留下些什么。和抱有同样期待的一群人同行，其中的快乐绝对是无与伦比，就和大家来自哪里，是何肤色，有何信仰都没多大关系了。</p>
+<p>写得很长了。人与城市，人与自然，人与人是永恒的话题，再说下去总也说不完的。我只是换种方式来讲讲我所认识的多伦多。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/10/01/taste-of-suzhou/" rel="next" title="品味苏州 – a Chronological Collection">
+                <i class="fa fa-chevron-left"></i> 品味苏州 – a Chronological Collection
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/01/11/The-Sunshine-State/" rel="prev" title="The Sunshine State">
+                The Sunshine State <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chenxi Qian</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

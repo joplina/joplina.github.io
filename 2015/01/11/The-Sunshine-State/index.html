@@ -1,38 +1,684 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!doctype html>
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="essay," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chenxi Qian's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="Day 1 (Day 1 &#x3D; 2014.12.31) 一年的最后十五分钟在奥兰多，一个人看全城的烟花，好浪漫。——FF  这一天的最后十五分钟我在Orlando，看车窗外全城到处都在放烟花，手机上是各种新年祝福短信和邮件。我就在一边看着远远近近的烟花，一边回复和发送一些新年祝福。FF在短信里说我在Orlando看到全城的烟花好浪漫。我想了想，嗯，一个人也是可以很浪漫的。 Day 2 今天">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Sunshine State">
+<meta property="og:url" content="http://blog.chenxiqian.com/2015/01/11/The-Sunshine-State/index.html">
+<meta property="og:site_name" content="Chenxi Qian&#39;s Blog">
+<meta property="og:description" content="Day 1 (Day 1 &#x3D; 2014.12.31) 一年的最后十五分钟在奥兰多，一个人看全城的烟花，好浪漫。——FF  这一天的最后十五分钟我在Orlando，看车窗外全城到处都在放烟花，手机上是各种新年祝福短信和邮件。我就在一边看着远远近近的烟花，一边回复和发送一些新年祝福。FF在短信里说我在Orlando看到全城的烟花好浪漫。我想了想，嗯，一个人也是可以很浪漫的。 Day 2 今天">
+<meta property="og:locale">
+<meta property="article:published_time" content="2015-01-12T03:39:15.000Z">
+<meta property="article:modified_time" content="2016-10-26T21:32:06.000Z">
+<meta property="article:author" content="Chenxi Qian">
+<meta property="article:tag" content="essay">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.chenxiqian.com/2015/01/11/The-Sunshine-State/"/>
+
+
+  <title> The Sunshine State | Chenxi Qian's Blog </title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Chenxi Qian's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+            Schedule
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                The Sunshine State
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-01-11T22:39:15-05:00" content="2015-01-11">
+              2015-01-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Day-1-Day-1-x3D-2014-12-31"><a href="#Day-1-Day-1-x3D-2014-12-31" class="headerlink" title="Day 1 (Day 1 &#x3D; 2014.12.31)"></a>Day 1 (Day 1 &#x3D; 2014.12.31)</h4><blockquote>
+<p>一年的最后十五分钟在奥兰多，一个人看全城的烟花，好浪漫。——<code>FF</code></p>
+</blockquote>
+<p><strong>这一天的最后十五分钟我在Orlando，看车窗外全城到处都在放烟花，手机上是各种新年祝福短信和邮件。</strong>我就在一边看着远远近近的烟花，一边回复和发送一些新年祝福。<code>FF</code>在短信里说我在Orlando看到全城的烟花好浪漫。我想了想，嗯，一个人也是可以很浪漫的。</p>
+<h4 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h4><blockquote>
+<p>今天我一直在想为什么在Disney大家都在喊我的名字，好奇怪呢。——<code>SZ</code></p>
+</blockquote>
+<p><strong>凌晨Uber叫了个车抵达了我们在Green Emerald Ct, Kissimmee, FL的住所。此时此刻小伙伴们还在Disney没有回来。</strong>在沙发上小睡一会儿，看到大家都回来了——<code>FL(Felix)</code> <code>CC(Andy)</code> <code>SZ(Micky)</code> <code>MS(Mary)</code> <code>NL(Nancy)</code>。大家很累却都很兴奋的样子。<code>SZ</code>说了句，好奇怪呢，我一直在想为什么今天在Disney大家都在喊我的名字。哈哈。<span id="more"></span></p>
+<p>大家洗洗睡下后，我开车和<code>CC</code>一起去附近的Walmart买东西，给大家准备明天的早饭。这时是凌晨三点。</p>
+<hr>
+<p><strong>睡到了上午，睡梦中已经隐隐听到<code>ZL</code> <code>SZ</code> <code>MS</code>和<code>NL</code>出发了。这是我们只有一辆Chevy，所以我和<code>CC</code>单独打车去Universal Studios，再和他们碰面。</strong></p>
+<p>Universal Studios Orlando的入口和Universal Studios LA非常相似——一条街布满了纪念品店和品牌店，和一些入迷的或是茫然的游客。我和<code>CC</code>从Islands of Adventure的入口入园，直接奔去Hogsmeade坐Hogwarts Express。走在路上<code>CC</code>和我描述昨天他们玩得全身湿透的经历，各种不爽，对今天十分期待云云。我也对今天十分期待。</p>
+<p>有可能窗外的“风景”太引人入胜，Hogwarts Express的整个旅途显得太短了。从Hogwarts到Forbidden Forest，到草原和无人去，再到伦敦郊外，最后到达伦敦，只有五分钟的路途。</p>
+<p>Hogwarts Express连接的是另一个园——Universal Studios. 出了King’s Cross Station以后我们直奔Diagon Alley，首先看到了Daily Prophets的报社，真的和电影里的场景很像很像。店铺琳琅满目，再向前走就是卖Wands的店，已经被买魔杖的小魔法学员们挤得水泄不通。好想进去瞧一瞧，但时间不够了。我们要去Gringotts探险。这是Harry Potter的小说及系列电影里的银行，Harry Potter曾经去里面取他父母留给他的财产。进入入口，排队的大厅忠实还原了Gringotts的Lobby的样子，一些长得很可怕又好笑的精灵在两边记账。进去以后是一个4d ride，看到了Voldemort在Gringotts追杀Harry。当然没有得逞最后离开的时候，好像是Ron还是谁——不记得了，反正是某个Weasley——说大家不用怕，Gringotts不管怎样都是safest place on earth.</p>
+<p>出了Gringotts我们就在Diagon Alley等Gringotts屋顶上那只female dragoZn喷火。为什么说是female——我们问一个工作人员这条龙什么时候会喷火——她说她是female，性情很难猜测，有时候10分钟喷一次，有时候隔很久才喷。于是我和<code>CC</code>就傻傻的站那儿抬着手举着手机望着那条龙。此时对角巷已是十分拥挤，来来往往的有各种穿着Hogwarts长袍的小萌孩儿们。</p>
+<p>然后我建议等一下<code>NL</code>和<code>MS</code>一起从Gringotss出来。一起坐了一下午的ride或者看4d movies。这些和LA的Universal很像，此处略去不说。说个有特色的：除去King’s Cross Station和Fake London外，这里有好多仿建美国著名城市的各个town：</p>
+<ul>
+<li>Fake SF</li>
+<li>Fake NYC</li>
+<li>Fake Beverly Hills and Hollywood</li>
+</ul>
+<p>正好我都去过这些地方，看那些地标性的景观，好像又回到了当初在那边度过的时光。<code>CC</code>说他特别喜欢SF，特别喜欢加州的阳光和海，特别喜欢Berkeley。有谁不喜欢呢？</p>
+<hr>
+<p>晚上我们就一起看parade，吃火鸡腿。最后<code>NL</code>和<code>MS</code>想回Diagon Alley看看，于是我和<code>CC</code> <code>ZL</code> <code>SZ</code>先坐Hogwarts Express<strong>回到Islands of Adventure</strong>了。我们一起看了来自Durmstrang Institute的男生们和来自Beauxbatons Academy of Magic的女生们的表演，然后他们陪我坐了一遍早期Harry Potter的ride，然后我们等<code>NL</code>和<code>MS</code>一起回家。</p>
+<h4 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h4><blockquote>
+<p>美妙的是一路上经历了各种天气，阴晴，暴雨，雨后的晚霞，和弥漫的大雾。——<code>CQ</code></p>
+</blockquote>
+<p>早晨取到了我的Dodge Avenger，将<code>NL</code>和<code>MS</code>送到Magic Kingdom后，踏上了我一个人去海滩的旅途。一个人去了三个地方：</p>
+<ul>
+<li>Astronauts Hall of Fame</li>
+<li>Kennedy Space Center</li>
+<li>Canaveral National Seashore</li>
+</ul>
+<p>第一个地方有个免费停车场，还有个假的航天飞机，好像是发现号的模型。所以短暂停留了下，试了试相机镜头。这里已经可以望到很远处的KSC的Vehicles Assembly Building. 然后我经过了KSC，想从那里去海边，到了一个闸道，我停下来问保安CNS怎么走，他直接给了我一张小纸条，上面是route. 看来好多人都想从这里过，实际上是不行的——后来6号来的时候发现这里是KSC内部管制区域。</p>
+<p>然后我就又开了一小时左右来到了CNS. 海边很凉，阳光被天上浓密的云层盖住了，所以海水不蓝，但海滩上还是有很多来度假的人们。大部分都在钓鱼，小孩子们在玩沙。我用广角镜头拍了一些人物，之所以用Ultrawide是为了突出海、天、陆地的广袤和人的渺小。但每当渺小的人站在无垠的空间面前，悠闲的无所事事，既无所畏惧，又无欲无求的时候，我们又会觉得人的心其实很广阔。我望着大西洋蒸腾上来的温暖的水汽从远方不断的飘向我们这里，然后凝结成水珠，向奥兰多方向汇聚。看上去就是沙尘暴，只不过小颗粒都是水不是沙。这个过程我用相机记录了下来。我感觉一场暴风雨即将来临。</p>
+<p>我就一路开到了Canaveral National Seashore的尽头，然后和<code>NL</code>与<code>MS</code>商量接她们的时间。算了一下开到海滩尽头的时候，返回正好可以准时在Magic Kingdon接到她们。在路上果然经历了大暴雨，在高速上雨刷打到最快速度都看不清。这就是我之前看到的大西洋蒸腾上来的水汽，终于找到了它们的归宿。好在暴雨不长，开过雨区以后，看到了最美的晚霞。我的身后是暴风雨，前方是奥兰多的落日。那是全天我最舒心的时刻。</p>
+<p>到达Magic Kingdom门口，等待<code>NL</code>与<code>MS</code>归来。此时发现自己去海边真好路上花了来回四小时。</p>
+<hr>
+<p>接到<code>NL</code>与<code>MS</code>以后，我们去Orlando downtown一家sushi bar吃饭，等菜的时候一起玩谁是卧底，很欢乐。想起上个月和哈佛回来看我们的<code>KL</code>一起还有和<code>LZ</code>参加南外圣诞聚会时候玩的场景。</p>
+<hr>
+<p>饭后我们启程去Miami。路上4小时，中间加了次油。第一次在佛州加油，不知道加拿大的卡需要去前台预付。以前每次在纽约州加油都是直接加的。中间经过一片雾气很浓，还有臭臭的空气的大沼泽地。路上一向早睡的<code>NL</code>全程都在陪我聊天，很感激。我们到达Miami-Cutler Bay的时候，已经是<strong>Day 4</strong>的凌晨三点半。<code>ZL</code>比我们晚了半小时出发但全程开的特别快，最后和我们差不多时间抵达Cutler Bay的住所。</p>
+<h4 id="Day-4"><a href="#Day-4" class="headerlink" title="Day 4"></a>Day 4</h4><blockquote>
+<p>我喜欢你的超广镜头。——<code>ZL</code></p>
+</blockquote>
+<p>这一天是2015.1.3，我们在Everglades Natnl Park. 早上我问了我的好哥们<code>SW</code>，他去过Everglades好多次，很清楚路线。他建议我们从Ernest那个门进去，可以一路开车到最里面。开不开限速终究是个问题，于是我们这次开在<code>ZL</code>前面，省得他纠结到底开多少速度哈哈。</p>
+<p>路两边的景色就像是非洲的稀树草原。时而也有沼泽。偶尔会冒出一个牌子说注意鹿或者注意豹，真是非洲的感觉。我们把车窗打开，暖风吹在脸上很舒服。车子向前移动着，<code>NL</code> <code>MS</code>照样一边和我聊天一边放着音乐唱着歌。眼看着路边Flamingo的路牌上Mark的Mile数越来越小，两边的小矮树迅速的向后移动，前方的云向我们不断的压下来。</p>
+<p>开到中断的时候，看到旁边有游人正在拿着长焦镜头探寻着什么。我实在忍不住，也停在了路旁。稀树草原最适合的题材就是将长焦镜头拉到最远，feature一颗天边孤独的树，它的周边什么都没有，呵护它的唯有广袤的天和广袤的地。这幅画面我已经追寻了很久很久，现在终于有可能有机会拍到了。但是这回我没有拍，一是停车地点不够合适，二是我有了更有趣的题材——拍人物。咱两辆车6个人有一半是美女，这时候最适合用超广镜头了，可以把天空的云拍的很dramatic，同时还可以把女生的腿拍的很细长。发哥瞬间对我的Ultrawide表示出了兴趣。最漂亮的一张合影是我们6人一起爬上<code>ZL</code>的那辆Chevy，或坐或站，然后我的Nikon with Ultrawide放在我的Avenger车尾，定时自拍照出来的。</p>
+<p>然后我们好像又开了几十miles，才来到Flamingo. 至此我仍以为Flamingo这个地方可以看到Flamingoes——很傻很天真。不过我们看到了鳄鱼！还有很多很多很多很多的鸟！所以发哥说Ultrawide不错，其实这一天我更喜欢我的Telezoom！抓拍鳄鱼和鸟类十分方便。我们坐了向导的船，沿着Flamingo Canal往北走。一路上向导给我们讲Flamingo Canal的历史——它是怎样被人类破坏了又重建的，还给我们指baby crocodile，各种鸟类，各种树比如Mangrove Trees，还有各种有毒的树。穿过Flamingo Canal我们来到Coot Bay，到达10-mile marker的时候，正好日落，我们在夕阳下拍了很多或是很美或是很搞笑的照片。</p>
+<hr>
+<p>从Flamingo回程的时候<code>NL</code>说她想开一会儿，于是她来steer. 我们趁着夜色回家了。路上又遇奇葩事件——出Everglades的时候天上泼下来一盆水，瞬间前挡风玻璃能见度为零。当然<code>NL</code>开车我是很放心的，我们都反映挺快，没出啥事。</p>
+<hr>
+<blockquote>
+<p>在Miami Beach夜晚那个梦幻般的海滩我一辈子都不会忘记。——<code>CC</code></p>
+</blockquote>
+<p>既然明天是<code>SZ</code>的生日，我们今天就帮她过了吧。晚上我们在一家位于Miami Beach的叫做Fogo de Chão的巴西烤肉用餐。吃的很不错，各种steak和各种鸡肉、羊肉。<code>SZ</code>很开心，给我们讲她在Duke遇到的男神教授的故事。我和一位manager说我们桌上有一个小朋友今天生日，点了一个店里赠送的特别的生日甜点。大家都被<code>SZ</code>洋溢着的快乐感染了。</p>
+<p>餐后我们续了parking朝海边走。看到了Miami Beach奢侈土豪的一面。路上许多RR和Bently，港口停着好多游艇，我说那些游艇有些值20M，<code>NL</code>不信——其实真有这么贵。然后大家都开始梦想自己什么时候能在这海边有一处自己的住所和自己的船。</p>
+<p>快到海边的时候，我看到一条有棕榈树和梦幻灯光的小路，我说这是个求婚的好地方。<code>ZL</code>说我身上还没有戒指。哈哈。走过那条小路，右方是高起来的一片小灌木丛，那一边是漆黑一片。我说那就是海，<code>CC</code>有点将信将疑，看到一条漆黑的小路伸出去也不敢踏进去。我第一个跑出去，真是桃花源记里面豁然开朗的感觉。那一边真的是一个梦幻般的世界。月亮几乎已是满月，整个天空被月亮照亮了，我们在沙滩上的影子都是月光下的影子。云也被月光照的很白，星星在云里穿梭。这时候我们视网膜的cone cells已经不起作用，rod cells让我们能够将面前的一片大海及海上奔来的浪看的清清楚楚。不一会儿<code>CC</code> <code>NL</code>和<code>MS</code>就下水了。我坐在沙滩上摆弄相机，想把他们的背影以及这梦幻的夜晚一起记录下来。<code>ZL</code>和<code>SZ</code>在我身后不知哪里说着悄悄话。</p>
+<p>这是一个美得我们不想回去的夜晚。</p>
+<h4 id="Day-5"><a href="#Day-5" class="headerlink" title="Day 5"></a>Day 5</h4><blockquote>
+<p>Key West有一家甜点名字很好听，我们大家一定要去吃。——<code>NL</code></p>
+</blockquote>
+<p><strong>2015.1.4这一天我们朝着美国最南端出发了。去年夏天去了加州一号公路，现在终于有机会在美国一号公路驰骋了。</strong>在朝Key West前进的路上总是想起2013.1.7这一天从Varadero返回Toronto的时候夜空中看到的Key West那一条狭长的像项链一样的地中海明珠。</p>
+<p>我照旧把我的小相机给坐在副驾的<code>NL</code>，让她帮我拍一些好照片。事实也证明她的摄影水平很好，车子高速移动时抓拍到了右侧停在电线上吹着海风的小鸟们。越往南，能看到的海越多。一号公路就越来越像一号公路的样子了。这时候我找了个地方停靠一下，把方向盘交给了<code>NL</code>。停的地方是一个很棒的resort门口，有个很美的棕榈树环绕的小池塘，我们又情不自禁的拍了好多照片。这时候我们两辆车GPS的地址和我们原来理解的目的地都有一些出入，于是我们和<code>ZL</code>打电话，决定一直向南前进，最后在”Mile Zero Marker”那里集合。这就是最著名的US-1开始和结束的地方。这条路从那里开始，沿着美国东海岸向北一直可以通到Canadian Border. 我一直很向往可以和”Mile Zero Marker”合影。</p>
+<p>然后我们做到了。这张合影也是我们此次佛罗里达之行最棒的合影之一。</p>
+<p>之后我们去看了小白宫——换个思路他就是中国皇帝用的行宫，或者说是承德避暑山庄——<code>SZ</code>脑子转挺快。</p>
+<p>然后我们几乎是掐着手表，在日落前赶到了the Southernmost Point. 和最南端那块石头合影的人已经排起了长队，大家都在等着日落合影。我拿出Ultrawide，在旁边的栏杆前拍海上的日落。我们在这里有很美的风景照很美的合影和很美的回忆。<strong>但Key West的高潮还不是这里。</strong></p>
+<hr>
+<p>我们在找晚上去哪儿吃的时候路遇一个很nice的胖大叔，看到我们是中国人很热情的给我们打招呼。于是我们去了他推荐的Conch Farm. 绝对来对了地方。这是一个典型的渔村海鲜吧，音乐的节奏不断，让大家心情都很好；入夜了以后外头是深蓝色的天，深蓝色的海，里头是温馨的灯光和各种让人眼花缭乱的海鲜。在排队的时候<code>MS</code>带领一些人去对面吃了号称最赞甜点&#x2F;冰淇淋。等食物的时候我陪<code>SZ</code>进了纪念品店。嗯没错，这家店还有纪念品店，所以肯定是一家著名的餐馆喽。我们终于吃到了大家都想念了好几天的oysters——因为前一天我们没有去成Miami Beach的Joe’s Stone Crab，我们就特别期待这里的美食。我知道这样的情形下我的Sony RX1R会有很出色的表现力，因为冷暖色调的背景衬托下，用35mm中广角大光圈拍摄前景，背景在下就会直接变成油油的那种感觉，和油画一样。于是这里也留下了一些很美妙的照片和视频。我们又唱了一段生日歌给<code>SZ</code>，多幸福的孩子~我们在这里也有很棒的合影、很棒的食物定妆照、和很萌的自拍。吃完以后，我们在船坞旁边走了几小步，欣赏了有才的<code>MS</code>的舞蹈。</p>
+<hr>
+<p>接着我们走到了整个Key West最著名的商业街，Duval Street. 街上有好多酒吧，画廊，还有一些好笑到没节操的店。我们要去的那家<code>NL</code>发现的甜品店，名字也很有意思，叫”better than sex”。于是大家都想去体验一下。到了店里，waitress拒绝给我们6人座，因为这是一个强调intimacy的地方，只提供小的座位。所以我们想要3+3的座位——然后我瞬间反应过来3+3不好，应该2+4才行。经过一番等候（墙上有一块牌子写着XXX在等待之后会更好），我们终于到了里面的座位。灯光很昏暗——用<code>CC</code>的话说是“很微妙”——后来那一晚他反复说着这个词。墙上的招贴画和摄影作品也是“很微妙”，是一些人体艺术或者是某些情景。<code>CC</code>趁此给我们猜了一个关于饺子的性别的谜语，我们之中有一个聪明人猜出来了。</p>
+<p><strong>经历了better than sex以后我启程出发回家。然后经历了我们此次旅途最难忘的一个时刻。</strong></p>
+<h4 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h4><blockquote>
+<p>这种事情有什么大惊小怪的，我们见多了，你们居然还打911去麻烦警察。——<code>an unknown trailer driver</code></p>
+</blockquote>
+<p><strong>2015.1.5我们度过了难忘的一个凌晨。</strong>我们从Key West回程，<code>NL</code>体谅我可能会累，先开了一小段，然后换我开回家。我们几乎都到家，进入小区的时候，<code>NL</code>还是<code>MS</code>接到一个电话，说“<code>ZL</code>加错了油，在高速上停了下来”。他们三个想必慌忙的不知所措，并且陷入了恐惧，<code>CC</code>因为另外一些原因，格外的害怕，希望我们过去帮忙一起处理。于是我把车子开回高速去寻找他们。在Florida Tnpk第11-14（记不清了）个出口的之间附近的地方，我看到了远方对面车道上有一辆车闪着紧急灯。然后我从最近一个出口出去，再从对面入口绕上来，最后停在了他们前方约100米处。由于当时<code>CC</code>格外的担心，我们将车子慢慢向后倒，靠着他们。于是我们在高速上开始了这个不眠的上半夜。</p>
+<p>我们就在那里等拖车过来。等一会儿后，<code>NL</code>有一些不舒服，我猜测<code>CC</code>和<code>ZL</code>的心理状态也会开始不稳定。于是<code>NL</code>此时有个主意，是让<code>CC</code>和<code>SZ</code>来我们车，然后我去<code>ZL</code>那辆车陪发哥处理。我至今仍认为这是当时最好的处理方式。于是<code>NL</code>驾车，他们先回家休息，我和<code>ZL</code>在高速上等拖车过来。</p>
+<p>最后事情妥善解决了，大家都平安无事。到家，洗完澡是1.5早晨五点多，躺下了以后秒入睡。睡了三个小时后就醒了，精神特别好，想必3小时是深浅睡眠结合的很好的一个完整sleep cycle。于是起床研究起柴油发动机和汽油发动机结构，辛烷值和维修常识。9点多<code>ZL</code>也醒了，于是我们一起打电话给租车公司，一起订了<code>ZL</code>和<code>SZ</code>两人今天晚些时候从Miami到Orlando的大巴票。中午大家渐渐起了，我们一起等拖车将我们的Chevy拖走。</p>
+<p><strong>至此这个意外事件告一段落，然后我们又启程，向我们的Miami Beach梦幻海滩前进。</strong></p>
+<blockquote>
+<p>好像今天我穿的很不合群。——<code>MS</code><br>不，是我们五个穿得很不合群。——<code>CQ</code></p>
+</blockquote>
+<p>我们去了<code>CC</code>和我们都梦寐以求的Joe’s Stone Crab。吃完海鲜后，正好离日落还有一两个小时。我们在Miami Beach的海滩一直玩到日落以后。开始是大家踏着浪，很随性的拍照。有合影的，有单独照的——都很帅很美。在<code>SZ</code>的点拨下，我用手机拍下了<code>NL</code>背后的那一缕沾湿了海水的头发，简直美极了。<code>ZL</code>趁机单手牵着<code>SZ</code>，单膝跪着，在沙滩上花起了爱心。这是一个pseudo求婚的动作。我赶紧在海浪把爱心打散前将这一刻记录了下来。然后我看到<code>CC</code>和<code>ZL</code>很嗨的跳进海里去游泳了。</p>
+<p>海滩上好多鸟儿在乱飞，太阳渐渐落下，夕阳将最后一束光从海边两个condo中间的缝隙撒向了海滩。这个时候我能看到<code>NL</code>和<code>MS</code>两人已经在很远很远的海天相接的地方了，看不清她们的脸，但想必十分的开心。<code>MS</code>穿了bikini，我们其他人衣服穿的都多了点，至少那张一起跳起来的合影是这样的。<code>MS</code>反复说，她穿的不合群。我说不对，是我们五个穿的不合群。当然我也是比较懒，因为在日落前要将<code>SZ</code>和<code>ZL</code>准时接到coach station去坐到奥兰多的巴士，怕麻烦就没去换衣服。</p>
+<p>我看准了时间叫上<code>ZL</code>和<code>SZ</code>出发了。此时此刻，我们在MacArthur Causeway上看到了最美的日落——夕阳就在我们面前Miami downtown的skyline的上方向我们斜照过来。金黄色的光线，打在那些高楼上，有着金黄色的反光，就像科幻电影里那些具有金属质感的高楼。我在上海，多伦多，纽约，旧金山，南京都看过城市的日落，都没有这么美的。于是我实在忍不住，一只手开车，一只手用手机摄像。当时正好在堵车，大家行进得很慢，我可以不慌不忙的拍摄。后来<code>ZL</code>坐在副驾也拿着我手机拍摄了照片和视频。这个时候我就很想要一个gopro. 虽然这东西一般没什么用。</p>
+<p>将他俩送到指定上车点的时候，和上车时间几乎一分钟不差，离巴士开还有15分钟，我安心的将车子开回去加油。于是又走了一遍MacArthur Causeway. 后来GPS给我导的一条路被封了，眼睁睁的看着加油站进不去，在单行的上桥口，只能又朝着Miami downtown的方向走了一遍MacArthur Causeway，这时候太阳已经落下去了，看到的是晚霞和桥上密密麻麻的车灯。桥上车很多不能U-turn，所以我开了一条GPS上没有的路，上了一个私人岛屿，保安居然放我进去了，参观了一圈豪宅以后，出岛顺利地在MacArthur Causeway上往回向Miami Beach前进。</p>
+<p>加满油（Miami Beach的油很贵，$2.99每加仑，只比多伦多便宜了20%）以后，顺利接到玩的很尽兴以后归来的<code>NL</code> <code>MS</code> <code>CC</code>三人，整理东西塞好六个人的行李，将<code>CC</code>的箱子当小baby一样系住后排中间的安全带，开始赶回奥兰多downtown，我们最后一晚的家。</p>
+<h4 id="Day-7"><a href="#Day-7" class="headerlink" title="Day 7"></a>Day 7</h4><blockquote>
+<p>你今天去了四趟MCO，却一次飞机都没坐。——<code>CC</code><br>是啊，我非常开心，第一趟是看日出，第二趟<code>SZ</code>发现了Hogwarts，第三趟是看日落，第四趟是看月出。几天来最美的奥兰多。——<code>CQ</code></p>
+</blockquote>
+<p>我们凌晨到家的时候，发现我们住的是一个贫民窟。但很温馨，有一个屋主人和她孩子的照片墙。这个时候大家好像都很嗨，不想睡觉的样子。也许是最后一晚，大家都恋恋不舍。<code>MS</code>尤其，开了netflix和我们一起在客厅听歌。我呢——在一边的电脑上作图，睡前要给<code>GAO</code>发去。入睡的时候大概是凌晨两点。<code>NL</code>和<code>MS</code>的航班是早上八点多，所以我们只有三个多小时可以睡啦。</p>
+<p>准时起床以后，棒棒的<code>NL</code>提出她可以来开车。于是我和<code>CC</code>两人不用把自己拍的很醒。机场送走了<code>NL</code>和<code>MS</code>以后开回downtown Orlando的时候，我在反光镜里看到了日出。半个小时后，我们在家里补觉了。又过了一个小时，起床，送<code>ZL</code>和<code>SZ</code>去机场。这个时候<code>NL</code>和<code>MS</code>已经到达纽约转机了。<code>ZL</code>是加航直飞多伦多，<code>SZ</code>是US Airways飞夏洛特。巧的是小两口都在Terminal B，很赞。</p>
+<hr>
+<p><strong>由于我和<code>CC</code>都已带好我们的行李，送完<code>ZL</code>和<code>SZ</code>后，我们就按照我们的原计划，一路奔向Kennedy Space Center了。</strong>按照我好友<code>SW</code>的建议，进入KSC Visitor Complex后我们先坐bus去参观vehicle assembly building，火箭移动发射平台，火星车和阿波罗计划的飞船及返回舱。vehicle assembly building就是后来<code>CC</code>在fb上换的那个头像的背景，建筑非常的大以至于在十几公里外的Astronaut Hall of Fame也能看的清清楚楚。Guide说这个方形的building在各个方向上都能将四个empire state buildings装进去。火箭移动发射平台也很壮观，可以由是履带带动着在陆地上走，可以想象这个履带有多巨大。看完Apollo 18的船体，Apollo 14的返回舱，以及钢琴丝编织成的火星车的轮子，我们坐车回KSC Visitor Complex，按计划观看IMAX版的Hubble。片子巨赞，旁白是Leonardo DiCaprio，而且是60mm胶片IMAX. 一两个月前看Interstella的时候我觉得我是最后一次看60mm胶片IMAX了，没想到这里还有一部胶片。可惜的是另一部Tom Cruise Narrating的IMAX没有时间看了。因为我们还要去看一个重头戏——亚特兰大号航天飞机。</p>
+<p>Space Shuttle ATLANTIS的展厅可谓是欲扬先抑，一块巨大的幕布挡住给人一种神秘感。当影片结束幕布升起的时候，后面一个<strong>十分庞大的ATLANTIS的机身出现在我们的眼中的时候（其实眼睛的广角也放不下），大家都被深深的震撼了</strong>。我和<code>CC</code>看完整个展出，具体到ATLANTIS的每个技术细节，物理的，化学的，工程的，不禁感慨上世纪70年代美国的工程师们实在是太牛逼了。我们就在航天飞机前面或是停留拍照，或是仔细看着上面每一块隔热砖的编号，或是看其巨大的机翼，或者是看我们加拿大引以为傲的”CANADARM”，实在是不想走了。想要跪拜在它的面前了。据说隔热砖是一块块手贴的，挑战者号好像就是因为有两块砖没贴好，升空没几秒就爆炸了，随之而去的是好多美国当时杰出宇航员的生命。</p>
+<hr>
+<p>走出KSC，我送<code>CC</code>去机场，那是我今天第三次去MCO了，路上正好看日落。<strong>在Orlando的最后一天，看到了日出，也看到了日落，终于是完满了。</strong>送完<code>CC</code>我独自回到我们最后一晚住的平民窟，清理一下垃圾，看到了屋主人在桌上摆的四块石头，分别是”Dream, Believe, Laugh, Love”。我觉得这是这次旅途最好的总结。同时也想起了来之前我在多伦多吃到的一张Fortune Cookie——“Get ready for a daring adventure.”出发前我们一起吃饭时候，<code>MS</code>还说daring这个词说得我有点害怕啊。</p>
+<p>然后我把车子开到还车点最近的一个加油站加满了油，清理了整个车厢和座位，将其送回给了机场附近的租车公司。这是我今天第四次去机场了。一路上看着月亮从天边的地平线升起，特别圆，特别大。然后我坐租车公司shuttle向机场出发等我的好友<code>SW</code>过来接我。这时候<code>CC</code>和我联系说他的航班晚点了，于是我们又聚到了一起聊天。<code>CC</code>很体贴的把吃的东西分给我，这时我确实很累很饿了。一直聊到我朋友<code>SW</code>出现。然后我就离开了Orlando，坐<code>SW</code>的车到了Gainesville.</p>
+<h4 id="Day-8"><a href="#Day-8" class="headerlink" title="Day 8"></a>Day 8</h4><blockquote>
+<p>我想买个礼物送给别人。——<code>CQ</code><br>买蝴蝶吧。——<code>SW</code></p>
+</blockquote>
+<p>以上引用的对话其实发生在一天前。我问<code>SW</code>送什么礼物好，他秒回了一张图片，里面是几种蝴蝶标本。特别漂亮。当时我就抑制不住高兴的心情，等待去佛罗里达自然历史博物馆的这天。</p>
+<p><strong>这是2015.1.7，<code>SW</code>带我很悠闲地逛了逛Gainesville，第一站自然就是去看自然历史博物馆</strong>，挑了只最精致漂亮的蝴蝶标本带了回去。然后我和<code>SW</code>一起看了我们很感兴趣的化石收藏和地球的地质演变史展，讨论了北美大陆是什么时候分开的，地中海是什么时候出现的，佛罗里达是什么时候出现的，台湾是怎么出现了又没了又出现了等等。</p>
+<p>看了Lake Alice，还有湖边很小巧精致优雅的小教堂。教堂的玻璃墙外就是湖景，玻璃墙内是一架钢琴。我忍不住上去开始弹简版的天空之城。教堂内坐着的两三个男生女生入神的听着，朝着我微笑，可能是我弹的不好吧。坏了好风景哈哈。<br>晚上去了UF的物理系参观。看到了刚从别的学校搬来UF养老的Edward Witten的老爸的办公室。走到前面对着门牌号说了一句，我来膜拜一下你的儿子。</p>
+<p>然后就是在家里和<code>SW</code>聊天，把好多好多这一年来未见想说的话都说了。</p>
+<h4 id="Day-9"><a href="#Day-9" class="headerlink" title="Day 9"></a>Day 9</h4><blockquote>
+<p>我能想到最浪漫的事，就是将你的手机带到北国，拍几张雪景，然后再给你寄回来。——<code>CQ</code> to <code>SW</code></p>
+</blockquote>
+<p>去吃了个texas roadhouse，美国的东西都比国内大个一两倍，而texas的东西又都比美国其他地方大个两三倍。所以牛排铁定吃不掉——刚上来就知道了——格子多的可以下五子棋了。吃饱了就想睡觉。<strong>回到家里，写了几张明信片，然后在佛罗里达的阳光下睡了一下午。</strong>有趣的是写明信片的时候，从<code>SW</code>的明信片堆里翻出了我2013年1月和2014年8月给他写的两张。一张是在古巴寄的，上面写着“朗姆酒，雪茄，老爷车，海水，椰树，烤鱼。你应该来看一下Key West的对岸。”那时候他正好和<code>TG</code>在Key West玩，而我在Havana，就像Ernest Hemingway和其好友Joe Russell隔着加勒比还相望。现在在Florida看到我很久以前寄到Florida的明信片，这是一种多么奇妙的体验。</p>
+<p>最后<code>SW</code>送我去station的时候，我把他的iPhone带走了。至于为什么带走，要是多年以后再看这个想不起来了（这不太可能发生），可以回去看他当时发的一条朋友圈下面的完整版故事——当然那条也是我用他手机发的。Anyway，这件事情所有人都觉得很好笑。我和<code>SW</code>也笑破了肚子。当然最后我把它描述的文艺了些——“我能想到最浪漫的事，就是将你的手机带到北国，拍几张雪景，然后再给你寄回来。”</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/essay/" rel="tag">#essay</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/12/20/%E4%BA%BA%E4%B8%8E%E5%9F%8E%E5%B8%82/" rel="next" title="人与城市">
+                <i class="fa fa-chevron-left"></i> 人与城市
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/20/%E8%A5%BF%E7%8F%AD%E7%89%99%E4%B9%9D%E6%97%A5/" rel="prev" title="西班牙九日">
+                西班牙九日 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-1-Day-1-x3D-2014-12-31"><span class="nav-number">1.</span> <span class="nav-text">Day 1 (Day 1 &#x3D; 2014.12.31)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-2"><span class="nav-number">2.</span> <span class="nav-text">Day 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-3"><span class="nav-number">3.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-4"><span class="nav-number">4.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-5"><span class="nav-number">5.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-6"><span class="nav-number">6.</span> <span class="nav-text">Day 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-7"><span class="nav-number">7.</span> <span class="nav-text">Day 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-8"><span class="nav-number">8.</span> <span class="nav-text">Day 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Day-9"><span class="nav-number">9.</span> <span class="nav-text">Day 9</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chenxi Qian</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
