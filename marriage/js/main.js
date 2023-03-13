@@ -87,5 +87,5 @@
 
   //Initializing the app
   //passing the countdown date
-  App.init({day: 11, month: 3, year: 2023, hour: 15, min: 59, sec: 59});
+  App.init({day: 11, month: 3, year: 2023, hour: 16, min: 38, sec: 59});
 });

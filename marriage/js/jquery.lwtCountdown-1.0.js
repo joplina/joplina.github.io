@@ -57,7 +57,7 @@
 	};
 
 	$.fn.setCountDown = function (options) {
-		var targetTime = new Date(03/11/2023);
+		var targetTime = new Date();
 
 		if (options.targetDate)
 		{
@@ -75,7 +75,7 @@
 
 		var nowTime = new Date();
 
-		diffSecs = Math.floor((targetTime.valueOf()-nowTime.valueOf())/1000);
+		diffSecs = Math.floor((nowTime.valueOf()-targetTime.valueOf())/1000);
 
 		$.data(this[0], 'diffSecs', diffSecs);
 
