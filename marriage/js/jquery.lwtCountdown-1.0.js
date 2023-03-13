@@ -117,7 +117,7 @@
 		if (diffSecs > 0)
 		{
 			e = $this;
-			t = setTimeout(function() { e.doCountDown(id, diffSecs-1) } , 1000);
+			t = setTimeout(function() { e.doCountDown(id, diffSecs+1) } , 1000);
 			$.data(e[0], 'timer', t);
 		} 
 		else if (cb = $.data($this[0], 'callback')) 
