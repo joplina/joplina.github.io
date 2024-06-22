@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+	Indus by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html lang="en" class="no-js">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Marriage</title>
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/et-lineicon.css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic,700' rel='stylesheet' type='text/css'>
+        <!--[if IE]>
+        	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+
+        <!-- Preloader -->
+        <div class="animationload">
+            <div class="loader">
+                Loading...
+            </div>
+        </div> 
+        <!-- End Preloader -->
+
+        <!-- =========================
+                 HOME
+        ========================== -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-164562762-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164562762-1');
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+
+    .root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    .wrapper {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .value,
+    .unit {
+      font-family: 'Space Mono', monospace;
+    }
+
+    .value {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+
+    .unit {
+      font-size: 3rem;
+    }
+
+    .copy {
+      position: fixed;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .sopy {
+      position: fixed;
+      top: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* Media queries. */
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .row:not(:first-child) {
+        margin-top: 0;
+      }
+
+      .value {
+        font-size: 6rem;
+      }
+
+      .unit {
+        font-size: 3rem;
+        margin-top: -24px;
+      }
+
+      .copy {
+        position: relative;
+        display: block;
+        margin-top: 24px;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .wrapper:not(:first-child) {
+        margin-left: 48px;
+      }
+
+      .row {
+        width: 800px;
+      }
+
+      .wrapper {
+        width: 33.3%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="sopy">(With love from Chenxi Qian and Carol Xiao, We have been married for)</div>
+  <div class="root">
+    <div class="row">
+      <div class="wrapper">
+        <div class="value" id="years"></div>
+        <div class="unit">years</div>
+      </div>
+      <div class="wrapper">
+        <div class="value" id="months"></div>
+        <div class="unit">months</div>
+      </div>
+      <div class="wrapper">
+        <div class="value" id="days"></div>
+        <div class="unit">days</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="wrapper">
+        <div class="value" id="hours"></div>
+        <div class="unit">hours</div>
+      </div>
+      <div class="wrapper">
+        <div class="value" id="minutes"></div>
+        <div class="unit">minutes</div>
+      </div>
+      <div class="wrapper">
+        <div class="value" id="seconds"></div>
+        <div class="unit">seconds</div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<div class="copy">
+                                <a href="https://cqian.org/marriage/invitation.pdf">
+                                <button class="btn-rounded btn btn-outline-primary mt-4">Invitation to Our Little Ceremony</button>
+                                </a>
+                                
+                                <a href="https://cqian.org/marriage/4pm-meetup-directions.pdf">
+                                <button class="btn-rounded btn btn-outline-primary mt-4">Timetable, Dinner and Directions</button>
+                                </a>
+
+<p></p>
+</div>
+
+  <script src="date.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const result = calculate();
+      render(result);
+
+      setInterval(() => {
+        render(calculate());
+      }, 1000);
+    });
+  </script>
+</body>
+
+
+
+
+
+
+
+        <!-- JAVASCRIPTS -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.lwtCountdown-1.0.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>
+        <script src="js/animated.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>
