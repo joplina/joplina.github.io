@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f6a50" />
+  <title>Tiny Trails Toronto</title>
+  <style>
+    :root {
+      --ink: #18201d;
+      --muted: #66716d;
+      --line: #dce3df;
+      --paper: #f6f8f6;
+      --card: #ffffff;
+      --green: #0f6a50;
+      --green-2: #e8f4ef;
+      --amber: #9a5b24;
+      --amber-bg: #fff4e8;
+      --red: #8b3f3f;
+      --red-bg: #fff0f0;
+      --shadow: 0 1px 1px rgba(16, 48, 36, .03), 0 10px 30px rgba(16, 48, 36, .06);
+    }
+
+    * { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, #eef8f3 0, transparent 28rem),
+        var(--paper);
+    }
+
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 64px; }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      font: 700 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1; letter-spacing: -.045em; margin: 0 0 12px; }
+    .lede { max-width: 730px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.55; }
+
+    .saved-pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      padding: 10px 13px;
+      border-radius: 999px;
+      color: var(--green);
+      font-weight: 750;
+      white-space: nowrap;
+      box-shadow: var(--shadow);
+    }
+
+    .controls {
+      background: rgba(255,255,255,.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 2fr .8fr 1fr 1.2fr .9fr auto;
+      gap: 12px;
+      align-items: end;
+      position: sticky;
+      top: 10px;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    label { display: grid; gap: 7px; min-width: 0; }
+    label > span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid #cfd8d3;
+      border-radius: 10px;
+      padding: 11px 12px;
+      background: #fff;
+      color: var(--ink);
+      min-height: 44px;
+      outline: none;
+    }
+    input:focus, select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(15,106,80,.12); }
+
+    .origin-wrap { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+    .icon-btn {
+      min-width: 44px;
+      border: 1px solid #cfd8d3;
+      background: #fff;
+      border-radius: 10px;
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .primary {
+      min-height: 44px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(15,106,80,.18);
+    }
+    .primary:hover { filter: brightness(.96); }
+    .primary:disabled { opacity: .55; cursor: wait; }
+
+    .statusbar {
+      margin: 14px 2px 16px;
+      min-height: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .statusbar strong { color: var(--ink); }
+    .weather-chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .section-label {
+      margin: 22px 0 10px;
+      font: 750 12px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .results { display: grid; gap: 12px; }
+
+    .card {
+      display: grid;
+      grid-template-columns: 62px 1fr 128px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      overflow: hidden;
+      box-shadow: 0 1px 0 rgba(16,48,36,.02);
+    }
+
+    .rank {
+      border-right: 1px solid var(--line);
+      display: grid;
+      place-content: center;
+      text-align: center;
+      color: var(--green);
+      font: 800 20px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+    }
+    .rank small { display: block; font-size: 9px; color: var(--muted); letter-spacing: .12em; margin-top: 7px; }
+
+    .card-main { padding: 17px 20px 15px; min-width: 0; }
+    .title-row { display: flex; gap: 12px; justify-content: space-between; align-items: start; }
+    .title-row h2 { font-size: 20px; line-height: 1.18; margin: 0 0 4px; letter-spacing: -.02em; }
+    .place { color: var(--muted); font-size: 14px; }
+    .summary { margin: 11px 0 12px; line-height: 1.5; }
+
+    .badges { display: flex; flex-wrap: wrap; gap: 7px; }
+    .badge {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 5px 8px;
+      background: #fbfcfb;
+      color: #53605b;
+      font: 650 12px/1.15 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .badge.good { color: var(--green); border-color: #83ad9d; background: var(--green-2); }
+    .badge.warn { color: var(--amber); border-color: #d9ad83; background: var(--amber-bg); }
+    .badge.bad { color: var(--red); border-color: #d9a1a1; background: var(--red-bg); }
+
+    .note {
+      margin-top: 10px;
+      border-left: 3px solid #d9ad83;
+      padding: 8px 10px;
+      background: #fff8ef;
+      color: #79512e;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .getting-there {
+      margin-top: 12px;
+      padding-top: 11px;
+      border-top: 1px dashed var(--line);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .getting-there b { color: var(--ink); text-transform: uppercase; font-size: 10px; letter-spacing: .1em; margin-right: 5px; }
+
+    .actions {
+      border-left: 1px solid var(--line);
+      display: grid;
+      align-content: center;
+      gap: 10px;
+      padding: 14px;
+      background: #fbfcfb;
+    }
+    .actions button, .actions a {
+      display: grid;
+      place-items: center;
+      min-height: 42px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 750;
+      text-align: center;
+    }
+    .save-btn { border: 1px solid var(--green); background: var(--green); color: #fff; }
+    .save-btn.saved { background: #fff; color: var(--green); }
+    .directions { border: 1px solid var(--green); background: #fff; color: var(--green); }
+    .details { border: 1px solid #cfd8d3; background: #fff; color: #4d5b56; }
+
+    .empty {
+      border: 1px dashed #b9c7c0;
+      border-radius: 14px;
+      padding: 32px;
+      background: rgba(255,255,255,.7);
+      text-align: center;
+      color: var(--muted);
+    }
+
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    footer a { color: var(--green); }
+
+    .spinner { display:inline-block; width: 13px; height: 13px; border: 2px solid #c7d9d2; border-top-color: var(--green); border-radius:50%; animation: spin .7s linear infinite; vertical-align:-2px; margin-right:6px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 980px) {
+      .controls { grid-template-columns: 2fr 1fr 1fr; position: static; }
+      .primary { grid-column: span 3; }
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 18px, 1180px); padding-top: 18px; }
+      .masthead { grid-template-columns: 1fr; }
+      .saved-pill { justify-self: start; }
+      .controls { grid-template-columns: 1fr 1fr; }
+      .origin-control { grid-column: 1 / -1; }
+      .primary { grid-column: 1 / -1; }
+      .card { grid-template-columns: 44px 1fr; }
+      .rank { font-size: 16px; }
+      .actions { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); grid-template-columns: repeat(3, 1fr); }
+      .card-main { padding: 15px 14px; }
+      .title-row h2 { font-size: 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .controls { grid-template-columns: 1fr; }
+      .origin-control, .primary { grid-column: 1; }
+      .actions { grid-template-columns: 1fr; }
+      .statusbar { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">Kid-walk finder · Greater Toronto</div>
+        <h1>Tiny Trails Toronto</h1>
+        <p class="lede">Find an easy outing for your child, ranked strictly by <strong>age fit</strong>, then <strong>weather suitability</strong>, then <strong>estimated drive</strong>. Stroller access is shown and can be required.</p>
+      </div>
+      <div class="saved-pill">♡ <span id="savedCount">0</span> saved</div>
+    </header>
+
+    <section class="controls" aria-label="Walk filters">
+      <label class="origin-control">
+        <span>Starting point</span>
+        <div class="origin-wrap">
+          <input id="originInput" value="Leaside, Toronto" autocomplete="street-address" aria-label="Starting point" />
+          <button id="geoBtn" class="icon-btn" title="Use my current location" aria-label="Use my current location">◎</button>
+        </div>
+      </label>
+
+      <label>
+        <span>Child age</span>
+        <select id="ageSelect" aria-label="Child age"></select>
+      </label>
+
+      <label>
+        <span>Day</span>
+        <select id="dateSelect" aria-label="Day"></select>
+      </label>
+
+      <label>
+        <span>Stroller</span>
+        <select id="strollerSelect" aria-label="Stroller requirement">
+          <option value="any">Show all</option>
+          <option value="partial">At least partly friendly</option>
+          <option value="full">Fully stroller-friendly</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Max drive</span>
+        <select id="driveSelect" aria-label="Maximum estimated drive">
+          <option value="20">20 min</option>
+          <option value="30" selected>30 min</option>
+          <option value="45">45 min</option>
+          <option value="60">60 min</option>
+          <option value="999">Any</option>
+        </select>
+      </label>
+
+      <button id="findBtn" class="primary">Find walks</button>
+    </section>
+
+    <div id="status" class="statusbar" aria-live="polite"></div>
+    <div id="sectionLabel" class="section-label">Picks · ranked by age fit, then weather, then drive</div>
+    <section id="results" class="results" aria-live="polite"></section>
+
+    <footer>
+      Live forecast and place-name search use Open-Meteo. Drive time is a transparent estimate based on distance, not live traffic; the Directions button opens Google Maps for a real route. The included locations are a curated starter set, so check closures, trail conditions, washrooms, parking, and accessibility before leaving.
+    </footer>
+  </main>
+
+<script>
+const DEFAULT_ORIGIN = { name: "Leaside, Toronto", lat: 43.7084, lon: -79.3681 };
+let origin = { ...DEFAULT_ORIGIN };
+let currentForecast = null;
+let saved = new Set(JSON.parse(localStorage.getItem("tinyTrailsSaved") || "[]"));
+
+const places = [
+  {
+    id: "edwards-gardens", name: "Edwards Gardens & Toronto Botanical Garden", area: "North York",
+    lat: 43.7341, lon: -79.3598, age: [92, 98, 96, 88], stroller: "full", paved: true, shade: 2, waterfront: false, mud: 0,
+    features: ["flowers", "bridges", "washrooms"], cost: "Free", parking: "On-site parking; TTC access nearby",
+    summary: "Short paved and packed paths, bridges, gardens, and plenty to point at without committing to a long loop.",
+    caution: "Some lower garden paths have slopes; stay on the main routes for the smoothest stroller outing."
+  },
+  {
+    id: "sunnybrook-park", name: "Sunnybrook Park", area: "North York",
+    lat: 43.7248, lon: -79.3572, age: [90, 96, 94, 88], stroller: "full", paved: true, shade: 2, waterfront: false, mud: 0,
+    features: ["wide paths", "playgrounds", "picnic areas"], cost: "Free", parking: "Multiple parking areas; easiest by car",
+    summary: "A flexible park for a short stroller loop, playground stop, or longer walk under mature trees.",
+    caution: "Large park: choose a specific parking area before leaving so the walk starts near the feature you want."
+  },
+  {
+    id: "evergreen-brick-works", name: "Evergreen Brick Works", area: "Don Valley",
+    lat: 43.6848, lon: -79.3657, age: [88, 97, 96, 91], stroller: "partial", paved: false, shade: 1, waterfront: true, mud: 1,
+    features: ["ponds", "nature play", "food"], cost: "Free grounds", parking: "Paid parking; shuttle/transit options vary",
+    summary: "A toddler-friendly mix of ponds, boardwalks, nature play, and indoor facilities if the outing needs a reset.",
+    caution: "Main areas are stroller-friendly, but some ravine and meadow paths are uneven or muddy after rain."
+  },
+  {
+    id: "sherwood-park", name: "Sherwood Park", area: "North Toronto",
+    lat: 43.7164, lon: -79.3877, age: [86, 96, 92, 82], stroller: "partial", paved: false, shade: 2, waterfront: false, mud: 1,
+    features: ["wooded trail", "playground", "off-leash area"], cost: "Free", parking: "Street parking; TTC nearby",
+    summary: "A compact wooded escape with a playground and enough trail variety for a toddler without a full-day commitment.",
+    caution: "The main path is manageable, but side trails can be rough; dogs may be present near the off-leash area."
+  },
+  {
+    id: "riverdale-farm", name: "Riverdale Farm & Cabbagetown walk", area: "Old Toronto",
+    lat: 43.6670, lon: -79.3619, age: [93, 99, 92, 78], stroller: "full", paved: true, shade: 1, waterfront: false, mud: 0,
+    features: ["farm animals", "short loops", "washrooms"], cost: "Free", parking: "Limited street parking; TTC often easier",
+    summary: "Farm animals provide a strong toddler payoff, with paved paths and nearby residential streets for an easy extension.",
+    caution: "Parking can be the hardest part; check current opening hours before making a special trip."
+  },
+  {
+    id: "wilket-creek", name: "Wilket Creek Trail", area: "North York",
+    lat: 43.7223, lon: -79.3693, age: [82, 93, 94, 90], stroller: "partial", paved: true, shade: 2, waterfront: true, mud: 1,
+    features: ["ravine", "creek", "connections"], cost: "Free", parking: "Access from Edwards Gardens or nearby streets",
+    summary: "A shaded ravine route that feels adventurous while staying close to Leaside and the botanical gardens.",
+    caution: "Construction, flooding, or washouts can affect ravine routes; verify trail conditions after storms."
+  },
+  {
+    id: "corktown-common", name: "Corktown Common", area: "West Don Lands",
+    lat: 43.6552, lon: -79.3542, age: [89, 98, 95, 86], stroller: "full", paved: true, shade: 1, waterfront: true, mud: 0,
+    features: ["playground", "splash pad", "city views"], cost: "Free", parking: "Street/paid parking; TTC accessible",
+    summary: "A modern, compact park with smooth paths, a playground, and water features that work especially well for toddlers.",
+    caution: "Little natural shade in some sections; bring sun protection on hot days."
+  },
+  {
+    id: "taylor-creek", name: "Taylor Creek Park", area: "East York",
+    lat: 43.6958, lon: -79.3057, age: [78, 91, 95, 92], stroller: "partial", paved: true, shade: 2, waterfront: true, mud: 1,
+    features: ["ravine", "creek", "long paved trail"], cost: "Free", parking: "Parking near park entrances; subway access possible",
+    summary: "A cool ravine walk with a paved central route, good for families who want more distance without leaving the city.",
+    caution: "Some access points are steep, and low sections can be wet after heavy rain."
+  },
+  {
+    id: "beltline", name: "Beltline Trail — Moore Park section", area: "Midtown",
+    lat: 43.6964, lon: -79.3854, age: [77, 90, 95, 95], stroller: "partial", paved: false, shade: 2, waterfront: false, mud: 1,
+    features: ["wooded rail trail", "ravine", "flexible distance"], cost: "Free", parking: "Street parking or TTC; several entry points",
+    summary: "A flat, shaded rail-trail feel with easy turn-around points, well suited to a child who wants to walk part of the way.",
+    caution: "Packed gravel is usually stroller-manageable but can soften after rain; some entrances use stairs."
+  },
+  {
+    id: "high-park", name: "High Park", area: "West Toronto",
+    lat: 43.6465, lon: -79.4637, age: [88, 97, 98, 96], stroller: "full", paved: true, shade: 2, waterfront: true, mud: 0,
+    features: ["zoo", "playgrounds", "pond"], cost: "Free", parking: "Vehicle access and parking rules may vary; TTC convenient",
+    summary: "Multiple toddler rewards in one place: animals, playgrounds, pond views, and paved routes under mature trees.",
+    caution: "It is large and hilly; pick one target rather than trying to cover the whole park."
+  },
+  {
+    id: "trillium-park", name: "Trillium Park & William G. Davis Trail", area: "Ontario Place",
+    lat: 43.6296, lon: -79.4096, age: [85, 95, 96, 92], stroller: "full", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["lake views", "smooth loop", "city skyline"], cost: "Free", parking: "Paid parking nearby; seasonal event traffic possible",
+    summary: "A smooth, visually interesting waterfront loop with rocks, bridges, and skyline views that works well with a stroller.",
+    caution: "Very exposed to sun and wind; weather matters more here than at a ravine or wooded park."
+  },
+  {
+    id: "humber-bay-east", name: "Humber Bay Park East", area: "Etobicoke waterfront",
+    lat: 43.6228, lon: -79.4769, age: [80, 92, 95, 94], stroller: "full", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["lake", "birds", "skyline"], cost: "Free", parking: "On-site parking can fill on weekends",
+    summary: "A flat waterfront walk with birds, boats, and skyline views; easy to shorten when a toddler is finished.",
+    caution: "Little shade and frequent wind; avoid the hottest or gustiest part of the day."
+  },
+  {
+    id: "woodbine-beach", name: "Woodbine Beach & Ashbridges Bay", area: "The Beaches",
+    lat: 43.6623, lon: -79.3096, age: [88, 97, 96, 90], stroller: "full", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["boardwalk", "playground", "beach"], cost: "Free", parking: "Paid/free lots vary; arrive early on warm weekends",
+    summary: "A paved boardwalk, sand, and playground options make this a high-reward outing for toddlers in fair weather.",
+    caution: "Parking and crowds can spike in summer; waterfront wind can make it feel much colder."
+  },
+  {
+    id: "tommy-thompson", name: "Tommy Thompson Park", area: "Leslie Street Spit",
+    lat: 43.6519, lon: -79.3218, age: [67, 82, 94, 98], stroller: "partial", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["birds", "long routes", "lake"], cost: "Free", parking: "Parking near entrance; interior is car-free",
+    summary: "Excellent for a long, quiet nature walk with older children; a stroller works on main routes but distances add up quickly.",
+    caution: "Very exposed, with limited shade and long distances between facilities."
+  },
+  {
+    id: "downsview-park", name: "Downsview Park", area: "North York",
+    lat: 43.7427, lon: -79.4794, age: [83, 94, 95, 93], stroller: "full", paved: true, shade: 0, waterfront: false, mud: 0,
+    features: ["wide paths", "play areas", "open fields"], cost: "Free", parking: "Multiple parking areas; transit access available",
+    summary: "Wide, forgiving paths and open spaces make it easy to manage a stroller, scooter, and unpredictable toddler energy.",
+    caution: "Open sections can feel hot or windy; choose routes near trees and play areas."
+  },
+  {
+    id: "earl-bales", name: "Earl Bales Park", area: "North York",
+    lat: 43.7548, lon: -79.4324, age: [82, 94, 96, 92], stroller: "full", paved: true, shade: 1, waterfront: false, mud: 0,
+    features: ["playground", "ravine views", "picnic areas"], cost: "Free", parking: "On-site parking",
+    summary: "A large park with paved routes, play areas, and enough variety for either a quick loop or a longer family walk.",
+    caution: "Some hills are substantial; stay on upper paved routes for an easier stroller trip."
+  },
+  {
+    id: "g-ross-lord", name: "G. Ross Lord Park", area: "North York",
+    lat: 43.7780, lon: -79.4548, age: [80, 92, 95, 93], stroller: "full", paved: true, shade: 1, waterfront: true, mud: 0,
+    features: ["reservoir", "wide paths", "picnic areas"], cost: "Free", parking: "On-site parking",
+    summary: "A broad, mostly smooth park walk around water with easy parking and room for a stroller or balance bike.",
+    caution: "Some sections are exposed; conditions can be buggy near water in warm weather."
+  },
+  {
+    id: "bluffers-park", name: "Bluffer's Park", area: "Scarborough",
+    lat: 43.7060, lon: -79.2306, age: [82, 94, 96, 92], stroller: "full", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["bluffs", "beach", "marina"], cost: "Free", parking: "Parking can fill early on summer weekends",
+    summary: "Dramatic scenery, boats, and a beach make this feel like a bigger outing while the main paths remain stroller-friendly.",
+    caution: "Access roads and parking can become congested; do not approach unstable cliff edges."
+  },
+  {
+    id: "colonel-samuel-smith", name: "Colonel Samuel Smith Park", area: "Etobicoke",
+    lat: 43.5935, lon: -79.5174, age: [78, 91, 95, 95], stroller: "full", paved: true, shade: 0, waterfront: true, mud: 0,
+    features: ["lake", "birds", "long loop"], cost: "Free", parking: "Parking near Humber College campus and park access",
+    summary: "A flat lakefront loop with strong birdwatching and plenty of room, best for a longer stroller walk.",
+    caution: "Exposed to wind and sun; fewer quick exit points than a neighbourhood park."
+  },
+  {
+    id: "rouge", name: "Rouge National Urban Park — Zoo Road area", area: "Scarborough / Pickering",
+    lat: 43.8181, lon: -79.1725, age: [69, 83, 95, 98], stroller: "partial", paved: false, shade: 2, waterfront: true, mud: 2,
+    features: ["forest", "river", "wildlife"], cost: "Free", parking: "Trailhead parking varies by route",
+    summary: "A true nature outing inside the GTA, better for an older child or an all-terrain stroller than a quick toddler loop.",
+    caution: "Trail surfaces and accessibility vary widely; choose a specific route and check current conditions first."
+  },
+  {
+    id: "kortright", name: "Kortright Centre for Conservation", area: "Vaughan",
+    lat: 43.8308, lon: -79.5908, age: [75, 91, 97, 98], stroller: "partial", paved: false, shade: 2, waterfront: false, mud: 2,
+    features: ["forest", "programs", "visitor centre"], cost: "Admission/parking may apply", parking: "On-site parking",
+    summary: "A family-oriented conservation area with forest trails and programming, worthwhile when you want a bigger half-day outing.",
+    caution: "Many natural trails are not smooth-stroller routes; check admission, hours, and accessibility before going."
+  }
+];
+
+const WMO = {
+  0: ["Clear", "☀"], 1: ["Mostly clear", "🌤"], 2: ["Partly cloudy", "⛅"], 3: ["Overcast", "☁"],
+  45: ["Fog", "🌫"], 48: ["Icy fog", "🌫"],
+  51: ["Light drizzle", "🌦"], 53: ["Drizzle", "🌦"], 55: ["Heavy drizzle", "🌧"],
+  61: ["Light rain", "🌦"], 63: ["Rain", "🌧"], 65: ["Heavy rain", "🌧"],
+  66: ["Freezing rain", "🌧"], 67: ["Freezing rain", "🌧"],
+  71: ["Light snow", "🌨"], 73: ["Snow", "🌨"], 75: ["Heavy snow", "❄"], 77: ["Snow grains", "❄"],
+  80: ["Rain showers", "🌦"], 81: ["Rain showers", "🌧"], 82: ["Heavy showers", "🌧"],
+  85: ["Snow showers", "🌨"], 86: ["Heavy snow showers", "❄"],
+  95: ["Thunderstorm", "⛈"], 96: ["Storm with hail", "⛈"], 99: ["Storm with hail", "⛈"]
+};
+
+function ageBand(age) {
+  if (age < 1.5) return 0;
+  if (age < 4) return 1;
+  if (age < 7) return 2;
+  return 3;
+}
+
+function ageFit(place, age) {
+  const raw = place.age[ageBand(age)];
+  const level = raw >= 95 ? 4 : raw >= 88 ? 3 : raw >= 78 ? 2 : 1;
+  const label = level === 4 ? "Excellent age fit" : level === 3 ? "Very good age fit" : level === 2 ? "Good age fit" : "Better for older kids";
+  return { raw, level, label };
+}
+
+function haversineKm(a, b) {
+  const R = 6371;
+  const dLat = (b.lat - a.lat) * Math.PI / 180;
+  const dLon = (b.lon - a.lon) * Math.PI / 180;
+  const lat1 = a.lat * Math.PI / 180;
+  const lat2 = b.lat * Math.PI / 180;
+  const x = Math.sin(dLat/2) ** 2 + Math.sin(dLon/2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+  return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1-x));
+}
+
+function estimatedDrive(place) {
+  const km = haversineKm(origin, place);
+  // Transparent GTA estimate: route distance multiplier + average urban speed + parking/entry time.
+  const routeKm = km * (km < 8 ? 1.28 : 1.18);
+  const avgKph = km < 8 ? 29 : km < 22 ? 38 : 50;
+  const minutes = Math.max(5, Math.round(routeKm / avgKph * 60 + 4));
+  return { km: routeKm, minutes };
+}
+
+function scoreWeather(place, f) {
+  if (!f) return { score: 50, label: "Weather unavailable", tone: "warn", reason: "Ranking uses a neutral weather score." };
+
+  let score = 100;
+  const reasons = [];
+  const rain = f.precip;
+  const wind = f.wind;
+  const hot = f.apparentMax;
+  const cold = f.tempMin;
+
+  const rainSensitivity = place.paved ? .45 : 1.0 + place.mud * .18;
+  score -= rain * .55 * rainSensitivity;
+  if (rain >= 45) reasons.push(place.paved ? "paved route helps in rain" : "natural paths may be wet");
+
+  if (hot >= 27) {
+    const heatPenalty = (hot - 26) * (place.shade === 2 ? 1.0 : place.shade === 1 ? 2.2 : 4.2);
+    score -= heatPenalty;
+    reasons.push(place.shade === 2 ? "good shade for heat" : place.waterfront ? "exposed waterfront in heat" : "limited shade");
+  }
+
+  if (cold <= 4) {
+    score -= (5 - cold) * (place.waterfront ? 2.4 : 1.1);
+    if (place.waterfront) reasons.push("waterfront may feel colder");
+  }
+
+  if (wind >= 22) {
+    score -= (wind - 20) * (place.waterfront ? 1.65 : place.shade === 2 ? .45 : .9);
+    reasons.push(place.waterfront ? "wind-exposed" : "windy");
+  }
+
+  if ([95,96,99].includes(f.code)) { score -= 45; reasons.push("storm risk"); }
+  if ([65,67,75,82,86].includes(f.code)) score -= 24;
+  if ([71,73,75,77,85,86].includes(f.code) && !place.paved) { score -= 12; reasons.push("snow on natural trail"); }
+
+  score = Math.max(0, Math.min(100, Math.round(score)));
+  const label = score >= 82 ? "Great for this weather" : score >= 65 ? "Good for this weather" : score >= 45 ? "Weather trade-offs" : "Poor weather match";
+  const tone = score >= 65 ? "good" : score >= 45 ? "warn" : "bad";
+  return { score, label, tone, reason: reasons[0] || "conditions look manageable" };
+}
+
+function strollerInfo(level) {
+  if (level === "full") return { label: "Stroller-friendly", tone: "good" };
+  if (level === "partial") return { label: "Partly stroller-friendly", tone: "warn" };
+  return { label: "Not stroller-friendly", tone: "bad" };
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+}
+
+function selectedAge() { return Number(document.getElementById("ageSelect").value); }
+function selectedDate() { return document.getElementById("dateSelect").value; }
+
+function formatDate(iso) {
+  return new Intl.DateTimeFormat("en-CA", { weekday: "short", month: "short", day: "numeric" }).format(new Date(iso + "T12:00:00"));
+}
+
+function weatherStatusHtml(f) {
+  if (!f) return `<span class="weather-chip">Weather unavailable — using neutral ranking</span>`;
+  const [label, icon] = WMO[f.code] || ["Forecast", "•"];
+  return `<span class="weather-chip">${icon} <strong>${escapeHtml(label)}</strong></span>
+    <span class="weather-chip">${Math.round(f.tempMin)}–${Math.round(f.tempMax)}°C</span>
+    <span class="weather-chip">Rain ${Math.round(f.precip)}%</span>
+    <span class="weather-chip">Wind ${Math.round(f.wind)} km/h</span>`;
+}
+
+function render() {
+  const age = selectedAge();
+  const strollerFilter = document.getElementById("strollerSelect").value;
+  const maxDrive = Number(document.getElementById("driveSelect").value);
+
+  let ranked = places.map(place => {
+    const a = ageFit(place, age);
+    const w = scoreWeather(place, currentForecast);
+    const d = estimatedDrive(place);
+    return { ...place, a, w, d };
+  }).filter(p => {
+    const strollerOk = strollerFilter === "any" || (strollerFilter === "partial" && p.stroller !== "no") || (strollerFilter === "full" && p.stroller === "full");
+    return strollerOk && p.d.minutes <= maxDrive;
+  }).sort((x, y) =>
+    y.a.level - x.a.level ||
+    y.a.raw - x.a.raw ||
+    y.w.score - x.w.score ||
+    x.d.minutes - y.d.minutes
+  );
+
+  document.getElementById("sectionLabel").textContent = `Picks ${ranked.length} · ranked by age fit, then weather, then drive`;
+  const results = document.getElementById("results");
+
+  if (!ranked.length) {
+    results.innerHTML = `<div class="empty"><strong>No walks match those filters.</strong><br>Increase the drive limit or relax the stroller requirement.</div>`;
+    return;
+  }
+
+  results.innerHTML = ranked.map((p, i) => {
+    const stroller = strollerInfo(p.stroller);
+    const isSaved = saved.has(p.id);
+    const directions = `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}&travelmode=driving`;
+    const details = `https://www.google.com/search?q=${encodeURIComponent(p.name + " official Toronto")}`;
+    const featureBadges = p.features.slice(0,3).map(x => `<span class="badge">${escapeHtml(x)}</span>`).join("");
+    return `
+      <article class="card">
+        <div class="rank">${i + 1}<small>OUT</small></div>
+        <div class="card-main">
+          <div class="title-row">
+            <div>
+              <h2>${escapeHtml(p.name)}</h2>
+              <div class="place">${escapeHtml(p.area)}</div>
+            </div>
+          </div>
+          <p class="summary">${escapeHtml(p.summary)}</p>
+          <div class="badges">
+            <span class="badge good">${escapeHtml(p.a.label)}</span>
+            <span class="badge ${p.w.tone}">${escapeHtml(p.w.label)}</span>
+            <span class="badge ${stroller.tone}">${escapeHtml(stroller.label)}</span>
+            <span class="badge">~${p.d.minutes} min drive</span>
+            <span class="badge">${p.d.km.toFixed(1)} km est.</span>
+            <span class="badge">${escapeHtml(p.cost)}</span>
+            ${featureBadges}
+          </div>
+          <div class="note">${escapeHtml(p.caution)}</div>
+          <div class="getting-there"><b>Getting there</b>${escapeHtml(p.parking)} · Weather note: ${escapeHtml(p.w.reason)}.</div>
+        </div>
+        <div class="actions">
+          <button class="save-btn ${isSaved ? "saved" : ""}" data-save="${p.id}">${isSaved ? "Saved ✓" : "Add"}</button>
+          <a class="directions" href="${directions}" target="_blank" rel="noopener">Directions</a>
+          <a class="details" href="${details}" target="_blank" rel="noopener">Check details</a>
+        </div>
+      </article>`;
+  }).join("");
+
+  results.querySelectorAll("[data-save]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.save;
+      if (saved.has(id)) saved.delete(id); else saved.add(id);
+      localStorage.setItem("tinyTrailsSaved", JSON.stringify([...saved]));
+      updateSavedCount();
+      render();
+    });
+  });
+}
+
+function updateSavedCount() {
+  document.getElementById("savedCount").textContent = saved.size;
+}
+
+async function geocodeOrigin(query) {
+  const url = `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query)}&count=5&language=en&format=json&countryCode=CA`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Could not search that location.");
+  const data = await res.json();
+  if (!data.results?.length) throw new Error("No Canadian location found. Try a neighbourhood, city, or postal code.");
+  const best = data.results[0];
+  return { name: [best.name, best.admin2, best.admin1].filter(Boolean).filter((x,i,a)=>a.indexOf(x)===i).join(", "), lat: best.latitude, lon: best.longitude };
+}
+
+async function fetchForecast(lat, lon, isoDate) {
+  const url = new URL("https://api.open-meteo.com/v1/forecast");
+  url.searchParams.set("latitude", lat);
+  url.searchParams.set("longitude", lon);
+  url.searchParams.set("daily", "weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,precipitation_probability_max,wind_speed_10m_max");
+  url.searchParams.set("timezone", "auto");
+  url.searchParams.set("forecast_days", "7");
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Weather service is unavailable.");
+  const data = await res.json();
+  const idx = data.daily.time.indexOf(isoDate);
+  if (idx < 0) throw new Error("That day is outside the available forecast window.");
+  return {
+    date: isoDate,
+    code: data.daily.weather_code[idx],
+    tempMax: data.daily.temperature_2m_max[idx],
+    tempMin: data.daily.temperature_2m_min[idx],
+    apparentMax: data.daily.apparent_temperature_max[idx],
+    precip: data.daily.precipitation_probability_max[idx] ?? 0,
+    wind: data.daily.wind_speed_10m_max[idx] ?? 0
+  };
+}
+
+async function findWalks({ skipGeocode = false } = {}) {
+  const btn = document.getElementById("findBtn");
+  const status = document.getElementById("status");
+  btn.disabled = true;
+  btn.textContent = "Checking…";
+  status.innerHTML = `<span><span class="spinner"></span>Checking location and forecast…</span>`;
+
+  try {
+    if (!skipGeocode) {
+      const q = document.getElementById("originInput").value.trim();
+      if (q && q.toLowerCase() !== origin.name.toLowerCase()) origin = await geocodeOrigin(q);
+    }
+    currentForecast = await fetchForecast(origin.lat, origin.lon, selectedDate());
+    document.getElementById("originInput").value = origin.name;
+    status.innerHTML = `<span><strong>From ${escapeHtml(origin.name)}</strong> · ${formatDate(selectedDate())}</span>${weatherStatusHtml(currentForecast)}<span>Drive times are estimates without traffic.</span>`;
+  } catch (err) {
+    currentForecast = null;
+    status.innerHTML = `<span><strong>Using ${escapeHtml(origin.name)}</strong> · ${formatDate(selectedDate())}</span><span class="weather-chip">${escapeHtml(err.message)}</span><span>Showing results with neutral weather ranking.</span>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Find walks";
+    render();
+  }
+}
+
+function populateControls() {
+  const ages = document.getElementById("ageSelect");
+  const values = [0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  ages.innerHTML = values.map(v => `<option value="${v}" ${v === 2 ? "selected" : ""}>${v < 1 ? "Under 1" : v % 1 ? v + " years" : v + (v === 1 ? " year" : " years")}</option>`).join("");
+
+  const dates = document.getElementById("dateSelect");
+  const fmt = new Intl.DateTimeFormat("en-CA", { weekday: "short", month: "short", day: "numeric" });
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(); d.setHours(12,0,0,0); d.setDate(d.getDate() + i);
+    const iso = d.toISOString().slice(0,10);
+    const label = i === 0 ? `Today · ${fmt.format(d)}` : i === 1 ? `Tomorrow · ${fmt.format(d)}` : fmt.format(d);
+    dates.insertAdjacentHTML("beforeend", `<option value="${iso}">${label}</option>`);
+  }
+}
+
+populateControls();
+updateSavedCount();
+
+document.getElementById("findBtn").addEventListener("click", () => findWalks());
+document.getElementById("ageSelect").addEventListener("change", render);
+document.getElementById("strollerSelect").addEventListener("change", render);
+document.getElementById("driveSelect").addEventListener("change", render);
+document.getElementById("dateSelect").addEventListener("change", () => findWalks({ skipGeocode: true }));
+document.getElementById("originInput").addEventListener("keydown", e => { if (e.key === "Enter") findWalks(); });
+
+document.getElementById("geoBtn").addEventListener("click", () => {
+  const status = document.getElementById("status");
+  if (!navigator.geolocation) {
+    status.textContent = "This browser does not support location access.";
+    return;
+  }
+  status.innerHTML = `<span><span class="spinner"></span>Getting your location…</span>`;
+  navigator.geolocation.getCurrentPosition(async pos => {
+    origin = { name: "Current location", lat: pos.coords.latitude, lon: pos.coords.longitude };
+    document.getElementById("originInput").value = origin.name;
+    await findWalks({ skipGeocode: true });
+  }, err => {
+    status.textContent = err.message || "Location access was not available. Enter a neighbourhood or postal code instead.";
+  }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+});
+
+findWalks({ skipGeocode: true });
+</script>
+</body>
+</html>
